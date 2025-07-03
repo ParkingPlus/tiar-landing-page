@@ -84,7 +84,7 @@ export function MegaMenu({
 
   return (
     <div className={cn(
-      "fixed left-0 right-0 bg-brand-50 border-t border-gray-100 shadow-lg z-50",
+      "fixed left-0 right-0 bg-gradient-to-b from-white to-brand-100 border-t border-gray-100 shadow-lg z-50",
       className
     )}>
       <div className="max-w-7xl mx-auto px-6 py-8">

@@ -55,6 +55,23 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
     }
   }`;
 
+// Get the 5 latest posts by category slug
+export const latestPostsByCategoryQuery = groq`*[_type == "post" && $category in categories[]->slug.current] | order(_createdAt desc) [0...5] {
+    _id,
+    _createdAt,
+    title,
+    slug,
+    mainImage,
+    description,
+    "imageURL": mainImage.asset->url,
+    "authorName": author->name,
+    categories[]->{
+      _id,
+      title,
+      slug
+    }
+}`;
+
 // Get all post slugs for generating static paths
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
     "params": { "slug": slug.current }

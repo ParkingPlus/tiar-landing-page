@@ -35,7 +35,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   const totalPages = Math.ceil(total / POSTS_PER_PAGE);
 
   return (
-    <div className="container mx-auto px-2 py-12 lg:px-16 md:py-16">
+    <div className="container mx-auto px-6 py-12 md:py-16">
         <header className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900">TIAR Blog</h1>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">

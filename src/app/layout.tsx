@@ -1,7 +1,5 @@
 import { Outfit } from "next/font/google";
-import "./globals.css"; 
-import { Navbar } from "@/layout/Navbar";
-import { Footer } from "@/layout/Footer";
+import "./globals.css";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -14,10 +12,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} dark:bg-gray-900`}>
-          <Navbar />
-          {children}
-          <Footer />
+      <body className={`${outfit.className} dark:bg-gray-900 `}>
+        {children}
       </body>
     </html>
   );

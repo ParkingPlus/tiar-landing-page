@@ -25,7 +25,7 @@ const EnhancedNavigationMenuTrigger = React.forwardRef<
   <NavigationMenuTrigger
     ref={ref}
     className={cn(
-      "group inline-flex h-12 w-max items-center justify-center rounded-md bg-transparent px-6 py-3 text-base font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 relative",
+      "group inline-flex h-16 w-max items-center justify-center rounded-md bg-transparent px-8 py-4 text-xl font-semibold transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 relative",
       "after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:bg-brand-500 after:transition-all after:duration-300 after:-translate-x-1/2",
       "hover:after:w-full data-[state=open]:after:w-full",
       className
@@ -73,11 +73,11 @@ export function Navbar() {
         "bg-white shadow-md": isScrolled,
       }
     )}>
-      <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-6 md:px-8">
+      <div className="max-w-7xl mx-auto flex h-24 items-center justify-between px-6 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3 lg:flex-1">
-          <Mountain className="h-8 w-8 text-brand-600" />
-          <span className="text-xl font-bold">TIAR</span>
+          <Mountain className="h-10 w-10 text-brand-600" />
+          <span className="text-2xl font-bold">TIAR</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -140,17 +140,11 @@ export function Navbar() {
           <Link href="/contact">
             <Button 
               variant="outline" 
-              className="border-brand-500 text-brand-600 hover:bg-brand-200 border-2"
+              className="border-brand-500 text-brand-600 hover:bg-brand-200 border-2 text-lg py-2 px-4"
             >
               Contact Sales
             </Button>
           </Link>
-          <Button 
-            onClick={() => setIsCalendlyOpen(true)}
-            className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3"
-          >
-            Book Demo
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
