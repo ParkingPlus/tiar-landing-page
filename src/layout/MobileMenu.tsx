@@ -98,7 +98,7 @@ export function MobileMenu({
               onClick={() => setMobileMenuOpen(false)}
             >
               <Mountain className="h-6 w-6 text-brand-600" />
-              <span className="font-bold text-brand-600 text-lg">TIAR</span>
+              <span className="font-bold text-brand-600 text-lg">Tiar</span>
             </Link>
           </div>
 

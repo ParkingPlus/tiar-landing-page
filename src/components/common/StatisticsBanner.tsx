@@ -1,3 +1,5 @@
+import ScaleInScroll from "../animations/collection/ScaleInScroll";
+
 interface Statistic {
   number: string;
   label: string;
@@ -45,6 +47,7 @@ export const Statistics = ({
 
   return (
       <section className={`py-16 ${getBackgroundClass()} text-white`}>
+        <ScaleInScroll delay={0.3} duration={0.7} initialScale={0.95}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                   <h2 className="text-3xl font-bold mb-4">{title}</h2>
@@ -67,6 +70,7 @@ export const Statistics = ({
                   ))}
               </div>
           </div>
+        </ScaleInScroll>
       </section>
   );
 };

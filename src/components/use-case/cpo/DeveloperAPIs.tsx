@@ -23,7 +23,7 @@ export function DeveloperAPIs() {
         <div className="bg-gray-900 py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-400">Built for Innovation</h2>
+                    <h2 className="text-base font-semibold leading-7 text-brand-400">Built for Innovation</h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
                         Unleash Your Potential with Our OpenAPI
                     </p>
@@ -36,7 +36,7 @@ export function DeveloperAPIs() {
                         {apiFeatures.map((feature) => (
                             <div key={feature.title} className="flex flex-col">
                                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-indigo-500">
+                                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-brand-500">
                                         {feature.icon}
                                     </div>
                                     {feature.title}

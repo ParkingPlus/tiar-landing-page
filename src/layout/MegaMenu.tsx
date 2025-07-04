@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mountain } from 'lucide-react';
+import Image from 'next/image';
 import { NavigationMenuLink } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
+import Logo from '@/assets/tiar/logo.svg';
 
 interface MenuItem {
   href: string;
@@ -98,12 +99,9 @@ export function MegaMenu({
                       href="/"
                       className="flex flex-col justify-center rounded-lg bg-gradient-to-br from-brand-100 to-brand-200 p-6 h-full no-underline outline-none focus:shadow-md hover:shadow-md transition-shadow"
                     >
-                      <Mountain className="h-8 w-8 text-brand-600 mb-3" />
-                      <div className="mb-2 text-xl font-bold text-gray-900">
-                        TIAR
-                      </div>
+                      <Image src={Logo} alt="logo" width={150} height={150} className="mb-3" />
                       <p className="text-sm leading-relaxed text-gray-700">
-                        Public transportation solution for the modern world.
+                        All-in-One EV Charging Management System.
                       </p>
                     </Link>
                   </NavigationMenuLink>

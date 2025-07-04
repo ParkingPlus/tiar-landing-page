@@ -33,15 +33,6 @@ const FeatureValue = ({ value }: { value: string | boolean }) => {
 export default function PricingComparison() {
   return (
     <div className="max-w-6xl mx-auto p-6">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Choose Your Plan
-        </h2>
-        <p className="text-lg text-gray-600">
-          Select the perfect plan for your EV charging business
-        </p>
-      </div>
 
       {/* Pricing Cards */}
       <div className="grid md:grid-cols-2 gap-8 mb-12">

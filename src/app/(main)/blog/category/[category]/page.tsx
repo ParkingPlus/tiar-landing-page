@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-        title: `${category.title} | TIAR Blog`,
+        title: `${category.title} | Tiar Blog`,
         description: `Browse articles in the ${category.title} category.`,
     };
 }

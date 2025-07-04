@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils'; // Assuming shadcn utils path
  * @property {string} caption - The descriptive text below the header.
  * @property {string[]} images - An array of image URLs for the background. If more than one, it becomes a carousel.
  * @property {string} [className] - Optional additional class names for the section container.
+ * @property {React.ReactNode} [actions] - Optional actions to be rendered below the caption.
  */
 interface HeroProps {
   eyebrow?: string;
@@ -19,6 +20,7 @@ interface HeroProps {
   caption: string;
   images: string[];
   className?: string;
+  actions?: React.ReactNode;
 }
 
 /**
@@ -28,7 +30,7 @@ interface HeroProps {
  * @param {HeroProps} props - The props for the component.
  * @returns {JSX.Element}
  */
-export function Hero({ eyebrow, header, caption, images, className }: HeroProps) {
+export function Hero({ eyebrow, header, caption, images, className, actions }: HeroProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Effect to handle the automatic sliding of the carousel
@@ -83,17 +85,7 @@ export function Hero({ eyebrow, header, caption, images, className }: HeroProps)
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-prose">
             {caption}
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-brand-500 text-white font-bold hover:bg-brand-600 px-8 py-6 text-base">
-              Book Demo
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white font-bold hover:bg-white hover:text-black px-8 py-6 text-base">
-              Learn More
-            </Button>
-            <Button size="lg" variant="ghost" className="text-white hover:bg-white/10 hover:text-white font-bold">
-              Contact Us
-            </Button>
-          </div>
+          {actions && <div className="flex flex-wrap gap-4">{actions}</div>}
         </motion.div>
       </div>
     </section>

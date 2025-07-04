@@ -7,9 +7,13 @@ import { Statistics } from "@/components/common/StatisticsBanner";
 import PropertyTypes from "@/components/use-case/property-owners/PropertyTypes";
 import { CallToAction } from "@/components/common/CallToAction";
 import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
+import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
+import FadeInScroll from "@/components/animations/collection/FadeInScroll";
+import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
+import SlideInScroll from "@/components/animations/collection/SlideInScroll";
 
 export const metadata: Metadata = {
-    title: "EV Charging for Property Owners | TIAR",
+    title: "EV Charging for Property Owners | Tiar",
     description: "Install, manage, and monetize EV charging stations on your property. Attract tenants and customers with a valuable, hassle-free amenity.",
 };
 
@@ -83,25 +87,31 @@ export default function PropertyOwnersPage() {
                 images={['https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
             />
 
-            <PropertyTypes />
+            <FadeInScroll delay={0.2} duration={0.8}>
+                <PropertyTypes />
+            </FadeInScroll>
 
-            <KeyFeatures
-                eyebrow="Key Features"
-                title="A Complete Solution for Property Owners"
-                subtitle="Our platform provides everything you need to offer EV charging as a premium, hassle-free amenity."
-                features={features}
-                backgroundColor="white"
-            />
+            <StaggeredScroll stagger={0.15} delay={0.4}>
+                <KeyFeatures
+                    eyebrow="Key Features"
+                    title="A Complete Solution for Property Owners"
+                    subtitle="Our platform provides everything you need to offer EV charging as a premium, hassle-free amenity."
+                    features={features}
+                    backgroundColor="white"
+                />
+            </StaggeredScroll>
 
-            <SubSection
-                eyebrow="Hassle-Free Installation"
-                title="Seamless Setup, Managed by Experts"
-                description="Our team handles everything from site assessment and installation to commissioning and ongoing maintenance. We ensure a smooth, turnkey process so you can focus on your business."
-                imageUrl="https://plus.unsplash.com/premium_photo-1681823071792-4e41733f2d0a?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="EV charger installation"
-                imagePosition="left"
-            />
-
+            <SlideInScroll direction="right" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Hassle-Free Installation"
+                    title="Seamless Setup, Managed by Experts"
+                    description="Our team handles everything from site assessment and installation to commissioning and ongoing maintenance. We ensure a smooth, turnkey process so you can focus on your business."
+                    imageUrl="https://plus.unsplash.com/premium_photo-1681823071792-4e41733f2d0a?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="EV charger installation"
+                    imagePosition="left"
+                />
+            </SlideInScroll>
+            
             <Statistics
                 title="Proven Results for Property Owners"
                 subtitle="Join hundreds of properties that are boosting value and generating revenue"
@@ -109,31 +119,37 @@ export default function PropertyOwnersPage() {
                 backgroundColor="green"
             />
 
-            <SubSection
-                eyebrow="Centralized Management"
-                title="Data and Control at Your Fingertips"
-                description="Our sub-account feature provides you with a dedicated portal to view detailed statistics for one or multiple properties. Track usage, revenue, and environmental impact with ease, giving you full visibility into your charging operations."
-                imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="Analytics dashboard on a tablet"
-                imagePosition="right"
-            />
+            <SlideInScroll direction="left" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Centralized Management"
+                    title="Data and Control at Your Fingertips"
+                    description="Our sub-account feature provides you with a dedicated portal to view detailed statistics for one or multiple properties. Track usage, revenue, and environmental impact with ease, giving you full visibility into your charging operations."
+                    imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="Analytics dashboard on a tablet"
+                    imagePosition="right"
+                />
+            </SlideInScroll>
 
-            <BenefitsCarousel
-                eyebrow="Business Benefits"
-                title="Why Property Owners Choose TIAR"
-                subtitle="Discover the key advantages that make our charging solutions the ideal investment for your property portfolio."
-                benefits={benefits}
-                backgroundColor="gray"
-            />
+            <StaggeredScroll stagger={0.15} delay={0.4}>
+                <BenefitsCarousel
+                    eyebrow="Business Benefits"
+                    title="Why Property Owners Choose Tiar"
+                    subtitle="Discover the key advantages that make our charging solutions the ideal investment for your property portfolio."
+                    benefits={benefits}
+                        backgroundColor="gray"
+                />
+            </StaggeredScroll>
 
-            <SubSection
-                eyebrow="Smart Load Management"
-                title="Maximize Efficiency, Minimize Cost"
-                description="Our intelligent system dynamically balances power across all active chargers. This prevents overloading your electrical infrastructure and minimizes costly upgrades, ensuring efficient energy use."
-                imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="Smart grid visualization"
-                imagePosition="left"
-            />
+            <SlideInScroll direction="right" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Smart Load Management"
+                    title="Maximize Efficiency, Minimize Cost"
+                    description="Our intelligent system dynamically balances power across all active chargers. This prevents overloading your electrical infrastructure and minimizes costly upgrades, ensuring efficient energy use."
+                    imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="Smart grid visualization"
+                    imagePosition="left"
+                />
+            </SlideInScroll>
 
             <CallToAction
                 title="Ready to Enhance Your Property?"
@@ -141,6 +157,12 @@ export default function PropertyOwnersPage() {
                 buttons={ctaButton}
                 description="Free site assessment • Custom quotes • 24/7 support"
                 backgroundColor="green"
+            />
+
+            <LatestPostsCarousel
+                title="Latest News"
+                subtitle="Stay up to date with the latest news and updates from our team."
+                category="Property Owners"
             />
         </main>
     );

@@ -10,13 +10,13 @@ import { UrbanChargingHubs } from "@/components/use-case/escooters/PublicChargin
 import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
 
 export const metadata: Metadata = {
-    title: "eScooter Charging Solutions | TIAR",
+    title: "eScooter Charging Solutions | Tiar",
     description: "Get ready for the future of urban mobility. Our upcoming eScooter charging solutions are built for shared fleets and private owners.",
 };
 
 const features = [
     {
-        icon: <Rocket className="h-8 w-8 text-indigo-500" />,
+        icon: <Rocket className="h-8 w-8 text-brand-500" />,
         title: "Coming Soon: The Future of Micromobility",
         description: "Be the first to leverage our next-gen charging network, specifically engineered for the booming eScooter market."
     },
@@ -133,7 +133,7 @@ export default function EScooterPage() {
             />
 
             <LatestPostsCarousel
-                category="testing"
+                category="eScooters"
                 title="Related Insights"
                 subtitle="Read our latest articles and discover the trends shaping the future of e-scooters."
             />

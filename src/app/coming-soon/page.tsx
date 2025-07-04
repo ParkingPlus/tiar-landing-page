@@ -3,7 +3,7 @@ import { Hero } from "@/components/common/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Coming Soon | TIAR",
+    title: "Coming Soon | Tiar",
     description: "Something new is coming! Stay tuned for our latest features and solutions.",
 };
 

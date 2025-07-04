@@ -1,5 +1,5 @@
-// components/common/CallToAction.tsx
 import { Button } from "@/components/ui/button";
+import AnimationWrapper from "../animations/AnimationWrapper";
 
 interface CTAButton {
     text: string;
@@ -31,7 +31,7 @@ export const CallToAction = ({
             case "purple":
                 return "bg-gradient-to-r from-purple-600 to-purple-800";
             default:
-                return "bg-gradient-to-r from-green-600 to-blue-600";
+                return "bg-gradient-to-r from-brand-500 to-brand-900";
         }
     };
 
@@ -44,12 +44,13 @@ export const CallToAction = ({
             case "purple":
                 return "text-purple-100";
             default:
-                return "text-green-100";
+                return "text-brand-100";
         }
     };
 
     return (
         <section className={`py-16 ${getBackgroundClass()} text-white`}>
+            <AnimationWrapper animation="scale" delay={0.2} duration={0.8}>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-3xl font-bold mb-4">{title}</h2>
                 {subtitle && (
@@ -76,8 +77,9 @@ export const CallToAction = ({
                 </div>
                 {description && (
                     <p className={`mt-6 text-sm ${getAccentClass()}`}>{description}</p>
-                )}
-            </div>
+                    )}
+                </div>
+            </AnimationWrapper>
         </section>
     );
 };

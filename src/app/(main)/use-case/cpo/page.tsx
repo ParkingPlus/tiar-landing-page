@@ -7,9 +7,13 @@ import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
 import { Metadata } from "next";
 import PlatformShowcase from "@/components/common/PlatformOverview";
 import { Zap, Globe, Shield, LayoutDashboard, Wallet, Palette, TerminalSquare, Users } from "lucide-react";
+import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
+import ScaleInScroll from "@/components/animations/collection/ScaleInScroll";
+import SlideInScroll from "@/components/animations/collection/SlideInScroll";
+import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
 
 export const metadata: Metadata = {
-  title: "Charging Point Operator Platform | TIAR",
+  title: "Charging Point Operator Platform | Tiar",
   description:
     "A powerful, scalable, and white-labeled EV charging platform for CPOs with full API access, multiple payment options, and centralized management.",
 };
@@ -41,7 +45,7 @@ const features = [
     description: "Easily expand your network with support for multi-site operations and nested accounts."
   },
   {
-    icon: <Shield className="h-8 w-8 text-indigo-500" />,
+    icon: <Shield className="h-8 w-8 text-brand-500" />,
     title: "Secure & Compliant",
     description: "GDPR-ready, PCI-compliant, and protected with end-to-end encryption."
   }
@@ -95,17 +99,19 @@ export default function CPOPage() {
       <Hero
         eyebrow="Charging Point Operator Platform"
         header="All-in-One Infrastructure for CPOs"
-        caption="TIAR helps Charging Point Operators launch, scale, and manage EV charging infrastructure with advanced features, flexible APIs, and branding capabilities."
+        caption="Tiar helps Charging Point Operators launch, scale, and manage EV charging infrastructure with advanced features, flexible APIs, and branding capabilities."
         images={["https://images.unsplash.com/photo-1631347826177-de288776ed3b?q=80&w=1170?q=80&w=2070&auto=format&fit=crop"]}
       />
 
-      <KeyFeatures
-        eyebrow="CPO-Focused Functionality"
-        title="A Robust Platform Built for Charging Point Operators"
-        subtitle="Everything you need to deliver high-quality public charging experiences, in one integrated platform."
-        features={features}
-        backgroundColor="white"
-      />
+      <StaggeredScroll stagger={0.15} delay={0.4}>
+        <KeyFeatures
+          eyebrow="CPO-Focused Functionality"
+          title="A Robust Platform Built for Charging Point Operators"
+          subtitle="Everything you need to deliver high-quality public charging experiences, in one integrated platform."
+          features={features}
+          backgroundColor="white"
+        />
+      </StaggeredScroll>
 
       <Statistics
         title="Proven Performance, Trusted by CPOs"
@@ -114,24 +120,30 @@ export default function CPOPage() {
         backgroundColor="green"
       />
 
-      <BenefitsCarousel
-        eyebrow="Platform Advantages"
-        title="Why CPOs Choose TIAR"
-        subtitle="Explore how our platform empowers operators to boost utilization, simplify operations, and scale rapidly."
-        benefits={benefits}
-        backgroundColor="green"
-      />
+      <StaggeredScroll stagger={0.15} delay={0.4}>
+        <BenefitsCarousel
+          eyebrow="Platform Advantages"
+          title="Why CPOs Choose Tiar"
+          subtitle="Explore how our platform empowers operators to boost utilization, simplify operations, and scale rapidly."
+          benefits={benefits}
+          backgroundColor="green"
+        />
+      </StaggeredScroll>
 
-      <SubSection
-        eyebrow="Total Operational Control"
-        title="Your Infrastructure, Your Brand"
-        description="TIAR enables you to offer charging services under your own name, powered by our backend. Customize your web interface, track analytics, monitor uptime, and expand across cities—all in one platform."
-        imageUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
-        imageAlt="Branded dashboard interface"
-        imagePosition="right"
-      />
+      <SlideInScroll direction="right" delay={0.2} duration={0.8}>
+        <SubSection
+          eyebrow="Total Operational Control"
+          title="Your Infrastructure, Your Brand"
+          description="Tiar enables you to offer charging services under your own name, powered by our backend. Customize your web interface, track analytics, monitor uptime, and expand across cities—all in one platform."
+          imageUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Branded dashboard interface"
+          imagePosition="right"
+        />
+      </SlideInScroll>
 
-      <PlatformShowcase />
+      <ScaleInScroll delay={0.2} duration={0.8}>  
+        <PlatformShowcase />
+      </ScaleInScroll>
 
       <CallToAction
         title="Empower Your Charging Network"
@@ -139,6 +151,12 @@ export default function CPOPage() {
         buttons={ctaButton}
         description="Fast onboarding • API-first design • Custom branding available"
         backgroundColor="green"
+      />
+
+      <LatestPostsCarousel
+        title="Latest News"
+        subtitle="Stay up to date with the latest news and updates from our team."
+        category="Operators"
       />
     </main>
   );

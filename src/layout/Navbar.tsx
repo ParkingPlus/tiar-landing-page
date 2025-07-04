@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Mountain } from 'lucide-react';
 import { MobileMenu } from './MobileMenu';
 import { MegaMenu } from './MegaMenu';
 import { Button } from '@/components/ui/button';
@@ -16,6 +15,8 @@ import {
 import { cn } from '@/lib/utils';
 import { menuItems } from '@/data/menuItem';
 import { PopupModal } from 'react-calendly';
+import Logo from '@/assets/Tiar/logo.svg';
+import Image from 'next/image';
 
 // Enhanced navigation menu trigger with hover indicator
 const EnhancedNavigationMenuTrigger = React.forwardRef<
@@ -73,11 +74,10 @@ export function Navbar() {
         "bg-white shadow-md": isScrolled,
       }
     )}>
-      <div className="max-w-7xl mx-auto flex h-24 items-center justify-between px-6 md:px-8">
+      <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-6 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3 lg:flex-1">
-          <Mountain className="h-10 w-10 text-brand-600" />
-          <span className="text-2xl font-bold">TIAR</span>
+          <Image src={Logo} alt="logo" width={150} height={150} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -140,7 +140,7 @@ export function Navbar() {
           <Link href="/contact">
             <Button 
               variant="outline" 
-              className="border-brand-500 text-brand-600 hover:bg-brand-200 border-2 text-lg py-2 px-4"
+              className="border-brand-500 text-brand-600 hover:bg-brand-500 hover:text-white border-2 text-lg py-2 px-4"
             >
               Contact Sales
             </Button>

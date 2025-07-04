@@ -1,9 +1,5 @@
-import { Outfit } from "next/font/google";
+import { aptos } from "./font";
 import "./globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
 
 export default function RootLayout({
   children,
@@ -12,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} dark:bg-gray-900 `}>
+      <body className={`${aptos.className} dark:bg-gray-900 `}>
         {children}
       </body>
     </html>

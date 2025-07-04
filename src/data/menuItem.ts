@@ -9,20 +9,17 @@ export interface MenuItem {
 export const menuItems: { [key: string]: MenuItem[] } = {
   aboutUs: [
     { href: "/about", title: "Our Mission", description: "Re-imagining urban mobility for everyone.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "City skyline with modern transport" },
-    { href: "/about#team", title: "Our Team", description: "Meet the people behind TIAR.", imageUrl: "https://placehold.co/600x400/bfdbfe/1e40af", imageAlt: "Diverse team working together" },
-    { href: "/about#benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "https://placehold.co/600x400/93c5fd/1e40af", imageAlt: "Key benefits of TIAR" },
-    { href: "/about#history", title: "Our Story", description: "Learn about our journey and vision for the future.", imageUrl: "https://placehold.co/600x400/60a5fa/1e40af", imageAlt: "Timeline graphic showing company growth" }
+    { href: "/about/benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "https://placehold.co/600x400/93c5fd/1e40af", imageAlt: "Key benefits of TIAR" },
   ],
   useCase: [
-    { href: "/use-case/property-owners", title: "Property Owners", description: "A smart charging solution for your property.", imageUrl: "https://images.unsplash.com/photo-1617886322207-6f504e7472c5?q=400w=600&auto=format&fit=crop", imageAlt: "Parking spots with charging stations" },
-    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "https://images.unsplash.com/photo-1738101001619-f0fd42ceafb0?q=400w=600&auto=format&fit=crop", imageAlt: "Bus operator monitoring a dashboard" },
-    { href: "/use-case/escooters", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "https://images.unsplash.com/photo-1623079399942-368de709ea32?q=400w=600&auto=format&fit=crop", imageAlt: "E-scooter charging station" },
-    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "https://images.unsplash.com/photo-1572675339312-3e8b094a544d?q=400w=600&auto=format&fit=crop", imageAlt: "EV charging stations for fleets" },
+    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "Bus operator monitoring a dashboard" },
+    { href: "/use-case/escooter", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "E-scooter charging station" },
+    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "EV charging stations for fleets" },
     { href: "/use-case/showroom", title: "Showroom", description: "Chargestations for your showroom.", imageUrl: "https://placehold.co/600x400/12b76a/054f31", imageAlt: "Showroom with charging stations" },
+    { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "https://placehold.co/600x400/12b76a/054f31", imageAlt: "Property owners offering charging stations" },
   ],
   offerings: [
     { href: "/solutions/white-label", title: "White Label", description: "Customize your solution to fit your brand.", imageUrl: "https://placehold.co/600x400/f04438/7a271a", imageAlt: "Diagram showing white label app" },
-    { href: "/solutions/web-based-charging", title: "Web-Based Charging", description: "A web-based charging solution.", imageUrl: "https://placehold.co/600x400/fee4e2/7a271a", imageAlt: "Web-based charging solution" },
     { href: "/solutions/cms", title: "CMS", description: "A charging management system for your charging stations.", imageUrl: "https://placehold.co/600x400/fee4e2/7a271a", imageAlt: "CMS dashboard" },
     { href: "/solutions/subaccount", title: "Subaccount", description: "A subaccount management system for property owners.", imageUrl: "https://placehold.co/600x400/fee4e2/7a271a", imageAlt: "Subaccount dashboard" },
   ],

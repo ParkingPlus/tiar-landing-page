@@ -74,8 +74,8 @@ export function ContactForm() {
     
     const formData = new FormData();
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "New Contact Form Submission from TIAR");
-    formData.append("from_name", "TIAR Contact Form");
+    formData.append("subject", "New Contact Form Submission from Tiar");
+    formData.append("from_name", "Tiar Contact Form");
     formData.append("replyto", data.email);
 
     Object.entries(data).forEach(([key, value]) => {

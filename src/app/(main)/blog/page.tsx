@@ -9,8 +9,8 @@ import { getCategories, getPosts } from "@/sanity/lib/fetch";
 export const revalidate = 60; // Revalidate every 60 seconds
 
 export const metadata: Metadata = {
-    title: "TIAR Blog",
-    description: "Insights, news, and stories from the team at TIAR.",
+    title: "Tiar Blog",
+    description: "Insights, news, and stories from the team at Tiar.",
 };
 
 interface BlogPageProps {
@@ -37,7 +37,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className="container mx-auto px-6 py-12 md:py-16">
         <header className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">TIAR Blog</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Tiar Blog</h1>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
                 Welcome to our corner of the internet. Here we share insights, news, and stories about the future of sustainable mobility.
             </p>

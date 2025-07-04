@@ -1,21 +1,26 @@
 import { Hero } from "@/components/common/Hero";
 import { SubSection } from "@/components/common/SubSection";
-import { Car, Zap, TrendingUp, Shield, Wrench, Users, Presentation, Gift } from "lucide-react";
+import { Car, Zap, TrendingUp, Shield, Wrench, Users, Presentation, Gift, Sparkles, BatteryCharging, Scale } from "lucide-react";
 import { Metadata } from "next";
 import { KeyFeatures } from "@/components/common/KeyFeatures";
 import { Statistics } from "@/components/common/StatisticsBanner";
 import { CallToAction } from "@/components/common/CallToAction";
 import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
-import { TestDriveExperience } from "@/components/use-case/showroom/TestDriveExperience";
+import { FeatureGrid } from "@/components/solutions/dashboard/FeatureGrid";
+import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
+import ScaleInScroll from "@/components/animations/collection/ScaleInScroll";
+import FadeInScroll from "@/components/animations/collection/FadeInScroll";
+import SlideInScroll from "@/components/animations/collection/SlideInScroll";
+import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
 
 export const metadata: Metadata = {
-    title: "EV Charging for Automotive Showrooms | TIAR",
+    title: "EV Charging for Automotive Showrooms | Tiar",
     description: "Integrate seamless EV charging into your dealership. Enhance the customer experience, educate buyers, and accelerate your EV sales.",
 };
 
 const features = [
     {
-        icon: <Presentation className="h-8 w-8 text-indigo-500" />,
+        icon: <Presentation className="h-8 w-8 text-brand-500" />,
         title: "Interactive Sales Tool",
         description: "Use our chargers as a dynamic part of your sales pitch, demonstrating the ease and speed of EV ownership firsthand."
     },
@@ -86,6 +91,19 @@ const benefits = [
     }
 ];
 
+const testDriveFeatures = [
+    {
+        name: 'The "First Charge" Moment',
+        description: 'Allow customers to plug in the car themselves. This simple, interactive moment demystifies charging and creates a tangible sense of ownership and ease.',
+        icon: BatteryCharging,
+    },
+    {
+        name: 'Educate and Impress',
+        description: 'Use the charging station as a hands-on educational tool. Your sales team can explain battery technology, range, and cost savings, positioning themselves as trusted experts.',
+        icon: Sparkles,
+    },
+]
+
 const ctaButton = [{ text: "Get a Custom Quote", variant: "default" as const }, { text: "Contact Us", variant: "outline" as const }]
 
 export default function ShowroomPage() {
@@ -98,24 +116,35 @@ export default function ShowroomPage() {
                 images={['https://images.unsplash.com/photo-1617886322207-6f504e7472c5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
             />
 
-            <KeyFeatures
-                eyebrow="Key Features"
-                title="The Ultimate EV Sales & Service Toolkit"
-                subtitle="Our charging solutions are designed to seamlessly integrate into your dealership's daily operations, from the sales floor to the service bay."
-                features={features}
-                backgroundColor="gray"
-            />
+            <ScaleInScroll delay={0.2} duration={0.8}>
+                <KeyFeatures
+                    eyebrow="Key Features"
+                    title="The Ultimate EV Sales & Service Toolkit"
+                    subtitle="Our charging solutions are designed to seamlessly integrate into your dealership's daily operations, from the sales floor to the service bay."
+                    features={features}
+                    backgroundColor="gray"
+                />
+            </ScaleInScroll>
 
-            <TestDriveExperience />
+            <FadeInScroll delay={0.2} duration={0.6}>
+                <FeatureGrid
+                    features={testDriveFeatures}
+                    header="The Ultimate EV Sales & Service Toolkit"
+                    subtitle="Our charging solutions are designed to seamlessly integrate into your dealership's daily operations, from the sales floor to the service bay."
+                    eyebrow="Integrate Charging into Your Sales Process"
+                />
+            </FadeInScroll>
 
-            <SubSection
-                eyebrow="Post-Sale Engagement"
-                title="From Showroom Sale to Home Installation"
-                description="Extend the customer relationship beyond the dealership. Our platform makes it easy for you to sell and manage the installation of home charging units, creating a new, high-margin revenue stream and providing a complete EV solution for your buyers."
-                imageUrl="https://images.unsplash.com/photo-1628642689621-e129113a3f3a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="EV charger being installed in a residential garage"
-                imagePosition="right"
-            />
+            <SlideInScroll direction="right" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Post-Sale Engagement"
+                    title="From Showroom Sale to Home Installation"
+                    description="Extend the customer relationship beyond the dealership. Our platform makes it easy for you to sell and manage the installation of home charging units, creating a new, high-margin revenue stream and providing a complete EV solution for your buyers."
+                    imageUrl="https://images.unsplash.com/photo-1628642689621-e129113a3f3a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="EV charger being installed in a residential garage"
+                    imagePosition="right"
+                />
+            </SlideInScroll>
 
             <Statistics
                 title="Drive Real Results"
@@ -124,13 +153,15 @@ export default function ShowroomPage() {
                 backgroundColor="green"
             />
 
-            <BenefitsCarousel
-                eyebrow="Dealership Benefits"
-                title="Why Smart Dealerships Choose TIAR"
-                subtitle="Discover the key advantages that make our charging solutions an essential investment for the modern dealership."
-                benefits={benefits}
-                backgroundColor="gray"
-            />
+            <StaggeredScroll stagger={0.15} delay={0.4}>
+                <BenefitsCarousel
+                    eyebrow="Dealership Benefits"
+                    title="Why Smart Dealerships Choose Tiar"
+                    subtitle="Discover the key advantages that make our charging solutions an essential investment for the modern dealership."
+                    benefits={benefits}
+                    backgroundColor="gray"
+                />
+            </StaggeredScroll>
 
             <CallToAction
                 title="Ready to Electrify Your Dealership?"
@@ -138,6 +169,12 @@ export default function ShowroomPage() {
                 buttons={ctaButton}
                 description="Custom showroom design • Sales training included • Priority support"
                 backgroundColor="green"
+            />
+
+            <LatestPostsCarousel
+                title="Latest News"
+                subtitle="Stay up to date with the latest news and updates from our team."
+                category="Showroom"
             />
         </main>
     );

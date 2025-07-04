@@ -1,10 +1,7 @@
-'use client';
-
-import React from 'react';
 import Link from 'next/link';
-import { Mountain } from 'lucide-react';
+import Image from 'next/image';
 import { menuItems } from '@/data/menuItem'; // adjust the path as needed
-import { cn } from '@/lib/utils';
+import Logo from '@/assets/tiar/logo-dark.svg';
 
 export function Footer() {
   return (
@@ -13,8 +10,7 @@ export function Footer() {
         {/* Logo & Contact */}
         <div className="md:col-span-1">
           <div className="flex items-center gap-2 mb-4">
-            <Mountain className="h-6 w-6 text-white" />
-            <span className="text-xl font-bold">TIAR</span>
+            <Image src={Logo} alt="logo" width={150} height={150} />
           </div>
           <p className="text-sm text-white/80 mb-4">
           Leading the way to a future of zero-emission mobility.
@@ -60,7 +56,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/20 py-4 text-center text-sm text-white/60 bg-brand-900">
-        &copy; {new Date().getFullYear()} TIAR. All rights reserved.
+        &copy; {new Date().getFullYear()} Tiar. All rights reserved.
       </div>
     </footer>
   );

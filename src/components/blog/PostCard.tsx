@@ -12,7 +12,7 @@ export default function PostCard({ post }: PostCardProps) {
   return (
     <Link href={`/blog/${post.slug.current}`} className="group block transform transition-transform hover:scale-[1.015]">
       <div className="overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white">
-        <div className="relative w-full max-h-[260px] aspect-[3/2] overflow-hidden">
+        <div className="relative w-full max-h-[220px] aspect-[3/2] overflow-hidden">
           {post.mainImage ? (
             <>
               <img

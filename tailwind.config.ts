@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        aptos: ["var(--font-aptos)", "sans-serif"],
+      },
       colors: {
         brand: {
           '25': '#f2f7ff',

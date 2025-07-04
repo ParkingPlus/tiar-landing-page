@@ -8,9 +8,13 @@ import FleetTypes from "@/components/use-case/fleet/FleetTypes";
 import { CallToAction } from "@/components/common/CallToAction";
 import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
 import PlatformOverview from "@/components/common/PlatformOverview";
+import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
+import FadeInScroll from "@/components/animations/collection/FadeInScroll";
+import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
+import SlideInScroll from "@/components/animations/collection/SlideInScroll";
 
 export const metadata: Metadata = {
-    title: "EV Fleet Charging Solutions | TIAR",
+    title: "EV Fleet Charging Solutions | Tiar",
     description: "Scalable and reliable EV charging solutions for electric fleets of all sizes, including cars, taxis, trucks, and buses.",
 };
 
@@ -41,7 +45,7 @@ const features = [
         description: "Intelligent power distribution to maximize charging efficiency"
     },
     {
-        icon: <TrendingUp className="h-8 w-8 text-indigo-500" />,
+        icon: <TrendingUp className="h-8 w-8 text-brand-500" />,
         title: "Cost Optimization",
         description: "Reduce operational costs through smart energy management"
     }
@@ -99,24 +103,30 @@ export default function FleetPage() {
                 images={['https://images.unsplash.com/photo-1631751333859-5753a4795fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
             />
 
-            <FleetTypes />
+            <FadeInScroll delay={0.2} duration={0.8}>
+                <FleetTypes />
+            </FadeInScroll>
 
-            <KeyFeatures
-                eyebrow="Key Features"
-                title="Everything You Need for Fleet Charging"
-                subtitle="Our comprehensive platform provides all the tools and features necessary to manage your electric fleet efficiently."
-                features={features}
-                backgroundColor="white"
-            />
+            <StaggeredScroll stagger={0.15} delay={0.4}>
+                <KeyFeatures
+                    eyebrow="Key Features"
+                    title="Everything You Need for Fleet Charging"
+                    subtitle="Our comprehensive platform provides all the tools and features necessary to manage your electric fleet efficiently."
+                    features={features}
+                    backgroundColor="white"
+                />
+            </StaggeredScroll>
 
-            <SubSection
-                eyebrow="Versatile Charging Infrastructure"
-                title="All Protocols, All Power Levels"
-                description="We support all major charging protocols (AC/DC, CCS, CHAdeMO) and a wide range of power outputs to meet the specific needs of your diverse fleet. From overnight depot charging to rapid destination charging, we have you covered."
-                imageUrl="https://images.unsplash.com/photo-1705051278299-7e64ba21437a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="Multiple EV chargers"
-                imagePosition="left"
-            />
+            <SlideInScroll direction="left" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Versatile Charging Infrastructure"
+                    title="All Protocols, All Power Levels"
+                    description="We support all major charging protocols (AC/DC, CCS, CHAdeMO) and a wide range of power outputs to meet the specific needs of your diverse fleet. From overnight depot charging to rapid destination charging, we have you covered."
+                    imageUrl="https://images.unsplash.com/photo-1705051278299-7e64ba21437a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="Multiple EV chargers"
+                    imagePosition="left"
+                />
+            </SlideInScroll>
 
             <Statistics
                 title="Proven Results for Fleet Operators"
@@ -125,31 +135,37 @@ export default function FleetPage() {
                 backgroundColor="green"
             />
 
-            <SubSection
-                eyebrow="Centralized Fleet Management"
-                title="Unified Dashboard for Total Control"
-                description="Monitor your entire charging infrastructure from a single, intuitive dashboard. Track energy consumption, manage charging sessions, and get real-time status updates for all your chargers, ensuring maximum uptime and efficiency."
-                imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="Dashboard analytics"
-                imagePosition="right"
-            />
+            <SlideInScroll direction="right" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Centralized Fleet Management"
+                    title="Unified Dashboard for Total Control"
+                    description="Monitor your entire charging infrastructure from a single, intuitive dashboard. Track energy consumption, manage charging sessions, and get real-time status updates for all your chargers, ensuring maximum uptime and efficiency."
+                    imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="Dashboard analytics"
+                    imagePosition="right"
+                />
+            </SlideInScroll>
 
-            <BenefitsCarousel
-                eyebrow="Business Benefits"
-                title="Why Fleet Operators Choose TIAR"
-                subtitle="Discover the key advantages that make our charging solutions the preferred choice for fleet operators worldwide"
-                benefits={benefits}
-                backgroundColor="gray"
-            />
+            <StaggeredScroll stagger={0.15} delay={0.4}>
+                <BenefitsCarousel
+                    eyebrow="Business Benefits"
+                    title="Why Fleet Operators Choose Tiar"
+                    subtitle="Discover the key advantages that make our charging solutions the preferred choice for fleet operators worldwide"
+                    benefits={benefits}
+                    backgroundColor="gray"
+                />
+            </StaggeredScroll>
 
-            <SubSection
-                eyebrow="Smart Energy Management"
-                title="Optimize Costs and Grid Impact"
-                description="Our intelligent energy management system balances charging loads, schedules sessions during off-peak hours, and integrates with renewable energy sources to reduce your operational costs and support grid stability."
-                imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                imageAlt="Smart grid visualization"
-                imagePosition="left"
-            />
+            <SlideInScroll direction="left" delay={0.2} duration={0.8}>
+                <SubSection
+                    eyebrow="Smart Energy Management"
+                    title="Optimize Costs and Grid Impact"
+                    description="Our intelligent energy management system balances charging loads, schedules sessions during off-peak hours, and integrates with renewable energy sources to reduce your operational costs and support grid stability."
+                    imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageAlt="Smart grid visualization"
+                    imagePosition="left"
+                />
+            </SlideInScroll>
 
             <CallToAction
                 title="Ready to Electrify Your Fleet?"
@@ -159,7 +175,11 @@ export default function FleetPage() {
                 backgroundColor="green"
             />
 
-            <PlatformOverview />
+            <LatestPostsCarousel
+                title="Latest News"
+                subtitle="Stay up to date with the latest news and updates from our team."
+                category="Fleet"
+            />
         </main>
     );
 }
