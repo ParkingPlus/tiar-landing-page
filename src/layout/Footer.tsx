@@ -5,7 +5,7 @@ import Logo from '@/assets/tiar/logo-dark.svg';
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-brand-400 to-brand-900 text-white">
+    <footer className="bg-gradient-to-b from-brand-800 to-brand-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
         {/* Logo & Contact */}
         <div className="md:col-span-1">

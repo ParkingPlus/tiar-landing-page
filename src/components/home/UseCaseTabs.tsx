@@ -12,7 +12,7 @@ const useCases = [
         icon: <Briefcase />,
         title: 'Build a Thriving Charging Business',
         description: 'Launch, manage, and scale your public charging network with our powerful, white-label platform. Maximize revenue, delight your drivers, and build your brand.',
-        imageUrl: 'https://images.unsplash.com/photo-1665639739502-34a8769a7103?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imageUrl: '/images/usecase/usecase-cpo.jpg',
         href: '/use-case/cpo',
     },
     {
@@ -21,7 +21,7 @@ const useCases = [
         icon: <Car />,
         title: 'Power Your Electric Fleet, Seamlessly',
         description: 'From cars and taxis to trucks and buses, we provide reliable and scalable charging solutions with smart analytics to keep your entire fleet moving efficiently.',
-        imageUrl: 'https://images.unsplash.com/photo-1631751333859-5753a4795fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imageUrl: '/images/usecase/usecase-fleet.jpg',
         href: '/use-case/fleet',
     },
     {
@@ -30,7 +30,7 @@ const useCases = [
         icon: <Building />,
         title: 'Unlock New Revenue From Your Property',
         description: 'Attract and retain tenants, customers, and visitors by providing a valuable amenity. We make it easy to install, manage, and monetize EV charging stations.',
-        imageUrl: 'https://images.unsplash.com/photo-1590225431942-2a29447a14d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imageUrl: '/images/usecase/usecase-property.jpg',
         href: '/use-case/property',
     },
     {
@@ -39,7 +39,7 @@ const useCases = [
         icon: <Store />,
         title: 'Turn Your Showroom into an Experience',
         description: 'Integrate seamless EV charging to enhance customer experience, educate buyers about e-mobility, and accelerate your EV sales with interactive tools.',
-        imageUrl: 'https://images.unsplash.com/photo-1617886322207-6f504e7472c5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        imageUrl: '/images/usecase/usecase-showroom.jpg',
         href: '/use-case/showroom',
     },
 ];

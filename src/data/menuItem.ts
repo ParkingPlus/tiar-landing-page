@@ -8,20 +8,20 @@ export interface MenuItem {
 
 export const menuItems: { [key: string]: MenuItem[] } = {
   aboutUs: [
-    { href: "/about", title: "Our Mission", description: "Re-imagining urban mobility for everyone.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "City skyline with modern transport" },
-    { href: "/about/benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "https://placehold.co/600x400/93c5fd/1e40af", imageAlt: "Key benefits of TIAR" },
+    { href: "/about", title: "Our Mission", description: "Re-imagining urban mobility for everyone.", imageUrl: "/images/about/mission.jpg", imageAlt: "City skyline with modern transport" },
+    { href: "/about/benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "/images/about/key.jpg", imageAlt: "Key benefits of TIAR" },
   ],
   useCase: [
-    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "Bus operator monitoring a dashboard" },
-    { href: "/use-case/escooter", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "E-scooter charging station" },
-    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "https://placehold.co/600x400/dbeafe/1e40af", imageAlt: "EV charging stations for fleets" },
-    { href: "/use-case/showroom", title: "Showroom", description: "Chargestations for your showroom.", imageUrl: "https://placehold.co/600x400/12b76a/054f31", imageAlt: "Showroom with charging stations" },
-    { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "https://placehold.co/600x400/12b76a/054f31", imageAlt: "Property owners offering charging stations" },
+    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "/images/usecase/usecase-cpo.jpg", imageAlt: "Bus operator monitoring a dashboard" },
+    { href: "/use-case/escooter", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "/images/usecase/usecase-escooter.jpg", imageAlt: "E-scooter charging station" },
+    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "/images/usecase/usecase-fleet.jpg", imageAlt: "EV charging stations for fleets" },
+    { href: "/use-case/showroom", title: "Showroom", description: "Chargestations for your showroom.", imageUrl: "/images/usecase/usecase-showroom.jpg", imageAlt: "Showroom with charging stations" },
+    { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "/images/usecase/usecase-property.jpg", imageAlt: "Property owners offering charging stations" },
   ],
   offerings: [
-    { href: "/solutions/white-label", title: "White Label", description: "Customize your solution to fit your brand.", imageUrl: "https://placehold.co/600x400/f04438/7a271a", imageAlt: "Diagram showing white label app" },
-    { href: "/solutions/cms", title: "CMS", description: "A charging management system for your charging stations.", imageUrl: "https://placehold.co/600x400/fee4e2/7a271a", imageAlt: "CMS dashboard" },
-    { href: "/solutions/subaccount", title: "Subaccount", description: "A subaccount management system for property owners.", imageUrl: "https://placehold.co/600x400/fee4e2/7a271a", imageAlt: "Subaccount dashboard" },
+    { href: "/solutions/white-label", title: "White Label", description: "Customize your solution to fit your brand.", imageUrl: "/images/solutions/solution-whitelabel.png", imageAlt: "Diagram showing white label app" },
+    { href: "/solutions/cms", title: "CMS", description: "A charging management system for your charging stations.", imageUrl: "/images/solutions/solution-cms.png", imageAlt: "CMS dashboard" },
+    { href: "/solutions/subaccount", title: "Subaccount", description: "A subaccount management system for property owners.", imageUrl: "/images/solutions/solution-subaccount.png", imageAlt: "Subaccount dashboard" },
   ],
   resources: [
     { href: "/blog", title: "Blog", description: "Read our latest insights and news.", imageUrl: "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.co/600x400/fffaeb/7a2e0e", imageAlt: "Collage of blog post preview images" },

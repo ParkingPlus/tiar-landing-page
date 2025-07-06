@@ -60,7 +60,7 @@ const galleryViews = [
       icon: <BarChart2 className="h-5 w-5" />,
       title: 'Data-Driven Decisions at a Glance',
       description: 'Visualize your entire network\'s performance. Track revenue, utilization, and user growth with our intuitive and customizable analytics dashboard to uncover trends and opportunities.',
-      imageUrl: 'https://placehold.co/1200x750/111827/4f46e5?text=Analytics+View',
+      imageUrl: '/images/cms/business.png',
   },
   {
       id: 'operations',
@@ -68,7 +68,7 @@ const galleryViews = [
       icon: <Wrench className="h-5 w-5" />,
       title: 'Proactive Network Management',
       description: 'Monitor the real-time health of every charger. Receive instant alerts, perform remote diagnostics, and manage firmware updates to ensure maximum uptime and reliability.',
-      imageUrl: 'https://placehold.co/1200x750/111827/10b981?text=Operations+View',
+      imageUrl: '/images/cms/utilization.png',
   },
   {
       id: 'finance',
@@ -76,7 +76,7 @@ const galleryViews = [
       icon: <DollarSign className="h-5 w-5" />,
       title: 'Automate Your Financial Workflow',
       description: 'Set dynamic tariffs, manage multiple pricing models, and automate the generation of bills, revenue shares, and accounting reports. Reduce manual work and eliminate errors.',
-      imageUrl: 'https://placehold.co/1200x750/111827/8b5cf6?text=Finance+View',
+      imageUrl: '/images/cms/pricing.png',
   },
   {
       id: 'marketing',

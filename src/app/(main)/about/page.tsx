@@ -36,7 +36,7 @@ export default function MissionVisionPage() {
                   eyebrow="Our Origin"
                   title="Indonesian Roots, Global Ambition"
                   description="Tiar was born from a unique insight into the dynamic, high-growth markets of Southeast Asia. We built and perfected our platform in Indonesia, creating a robust, scalable, and adaptable system designed to meet the complexities of the region. This foundation gives us an unparalleled advantage as we expand, offering a battle-tested solution that understands the nuances of emerging markets better than anyone."
-                  imageUrl="https://images.unsplash.com/photo-1562327352-73542a149023?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  imageUrl="/images/about/asean-map.jpg"
                   imageAlt="Map of Southeast Asia highlighting trade and data routes"
                   imagePosition="right"
                   className="bg-gray-100"

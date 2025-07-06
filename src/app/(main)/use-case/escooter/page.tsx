@@ -90,7 +90,7 @@ export default function EScooterPage() {
                 eyebrow="COMING SOON"
                 header="Powering the Micromobility Revolution"
                 caption="The eScooter boom is here. Get ready to deploy specialized, reliable, and user-friendly charging points designed for the next wave of urban transport."
-                images={['https://images.unsplash.com/photo-1623079400394-f07956928c3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                images={['/images/usecase/usecase-escooter.jpg']}
             />
             <SubSection
                 eyebrow="A Multi-Billion Dollar Opportunity"

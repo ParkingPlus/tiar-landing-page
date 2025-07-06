@@ -24,7 +24,7 @@ export function MissionVisionBlock() {
                             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Vision</h2>
                         </div>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            To be the foundational operating system for electric mobility in Indonesia and Southeast Asia, creating a single, seamless, and sustainable transportation ecosystem for the future.
+                            To become the heart of electric mobility innovation in Indonesia and Southeast Asia—creating an integrated, seamless, and sustainable transportation ecosystem for the future.
                         </p>
                     </div>
                 </div>
