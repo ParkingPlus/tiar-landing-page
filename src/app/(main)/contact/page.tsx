@@ -1,6 +1,4 @@
 import { ContactForm } from "@/components/contact/ContactForm";
-import Logo from '@/assets/Tiar/logo.svg';
-import Image from 'next/image';
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 
 // Import animations
@@ -61,7 +59,7 @@ export default function ContactPage() {
             <FadeInScroll duration={0.8}>
               <div className="inline-flex items-center gap-2 bg-brand-100 text-brand-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <MessageCircle className="w-4 h-4" />
-                Let's Connect
+                Let&apos;s Connect
               </div>
             </FadeInScroll>
             
@@ -70,7 +68,7 @@ export default function ContactPage() {
                 Get in <span className="text-brand-600">Touch</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Ready to transform your charging infrastructure? We'd love to hear about your project and show you how TIAR can help you succeed.
+                Ready to transform your charging infrastructure? We&apos;d love to hear about your project and show you how TIAR can help you succeed.
               </p>
             </AnimateOnScroll>
           </div>
@@ -137,7 +135,7 @@ export default function ContactPage() {
                       Start Your Journey
                     </h2>
                     <p className="text-gray-600">
-                      Tell us about your project and we'll get back to you within 24 hours.
+                      Tell us about your project and we&apos;ll get back to you within 24 hours.
                     </p>
                   </div>
                   <ContactForm />

@@ -28,7 +28,7 @@ export function DeveloperAPIs() {
                         Unleash Your Potential with Our OpenAPI
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
-                        Don't just manage your network—innovate with it. Our developer-friendly API gives you the power to build the future of charging.
+                        Don&apos;t just manage your network—innovate with it. Our developer-friendly API gives you the power to build the future of charging.
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

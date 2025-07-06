@@ -15,7 +15,7 @@ import {
 import { cn } from '@/lib/utils';
 import { menuItems } from '@/data/menuItem';
 import { PopupModal } from 'react-calendly';
-import Logo from '@/assets/Tiar/logo.svg';
+import Logo from '@/assets/tiar/logo.svg';
 import Image from 'next/image';
 
 // Enhanced navigation menu trigger with hover indicator

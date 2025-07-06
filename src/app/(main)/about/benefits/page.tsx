@@ -80,7 +80,7 @@ export default function BenefitsPage() {
                     <Lightbulb className="mx-auto h-12 w-12 text-gray-400" />
                     <figure className="mt-6">
                         <blockquote className="text-xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9">
-                            <p>“TIAR wasn't just a software provider; they were our launch partner. Their operational insights saved us months of trial-and-error, and their platform allowed our small team to perform like a major player from day one.”</p>
+                            <p>“TIAR wasn&apos;t just a software provider; they were our launch partner. Their operational insights saved us months of trial-and-error, and their platform allowed our small team to perform like a major player from day one.”</p>
                         </blockquote>
                         <figcaption className="mt-8">
                             <div className="text-base">

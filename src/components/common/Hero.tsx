@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button'; // Assuming shadcn button path
 import { cn } from '@/lib/utils'; // Assuming shadcn utils path
 
 /**

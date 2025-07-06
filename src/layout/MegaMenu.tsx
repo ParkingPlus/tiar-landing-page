@@ -56,7 +56,13 @@ const ImagePreview = ({ item }: { item: MenuItem | null }) => {
   return (
     <div className="hidden lg:block sticky top-24 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 h-full">
       <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
-        <img src={item.imageUrl} alt={item.imageAlt || ''} className="absolute top-0 left-0 w-full h-full object-cover" />
+        <Image 
+          src={item.imageUrl} 
+          alt={item.imageAlt || ''} 
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
       <div className="p-6">
         <h3 className="font-bold text-lg text-gray-900">{item.title}</h3>
@@ -76,6 +82,7 @@ export function MegaMenu({
   columns = 2,
   className 
 }: MegaMenuProps) {
+  console.log(title);
   const [activeItem, setActiveItem] = React.useState<MenuItem | null>(null);
 
   React.useEffect(() => {

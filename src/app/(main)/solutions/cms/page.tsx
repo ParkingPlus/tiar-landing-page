@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { CallToAction } from "@/components/common/CallToAction";
 import { Gallery } from "@/components/solutions/dashboard/Gallery";
 import { FeatureGrid } from "@/components/solutions/dashboard/FeatureGrid";
-import { FileText, Coins, BarChartBig, Cpu, Megaphone, Globe, Users, BarChart2, Wrench, DollarSign, BarChart } from "lucide-react";
+import { FileText, Coins, BarChartBig, Cpu, Megaphone, Globe, Users, BarChart2, Wrench, DollarSign } from "lucide-react";
 import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
 import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
 import SlideInScroll from "@/components/animations/collection/SlideInScroll";

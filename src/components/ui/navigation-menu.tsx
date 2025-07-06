@@ -1,8 +1,7 @@
 import * as React from "react"
 import { ChevronDown } from "lucide-react"
-import { Slot } from "@radix-ui/react-slot"
-import { cva } from "class-variance-authority"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
+import { cva } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 

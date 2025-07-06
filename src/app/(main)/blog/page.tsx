@@ -14,17 +14,19 @@ export const metadata: Metadata = {
 };
 
 interface BlogPageProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string;
     category?: string;
     sortBy?: string;
-  };
+  }>;
 }
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const page = Number(searchParams.page) || 1;
-  const category = searchParams.category || 'all';
-  const sortBy = searchParams.sortBy || 'newest';
+  const searchParamsValue = await searchParams;
+  
+  const page = Number(searchParamsValue.page) || 1;
+  const category = searchParamsValue.category || 'all';
+  const sortBy = searchParamsValue.sortBy || 'newest';
 
   // Fetch all posts (newest first by default) and all categories
   const [{ posts, total }, categories] = await Promise.all([

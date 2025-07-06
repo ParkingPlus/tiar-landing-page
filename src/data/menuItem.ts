@@ -1,3 +1,5 @@
+import { MenuItems } from "@/types";
+
 export interface MenuItem {
   href: string;
   title: string;
@@ -6,7 +8,7 @@ export interface MenuItem {
   imageAlt?: string;
 }
 
-export const menuItems: { [key: string]: MenuItem[] } = {
+export const menuItems: MenuItems = {
   aboutUs: [
     { href: "/about", title: "Our Mission", description: "Re-imagining urban mobility for everyone.", imageUrl: "/images/about/mission.jpg", imageAlt: "City skyline with modern transport" },
     { href: "/about/benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "/images/about/key.jpg", imageAlt: "Key benefits of TIAR" },

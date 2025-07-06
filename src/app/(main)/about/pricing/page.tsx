@@ -1,9 +1,8 @@
 import PricingComparison from "@/components/pricing/PricingComparison";
-import { Check, Zap, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 
 // Import animations
 import AnimateOnScroll from "@/components/animations/collection/AnimateOnScroll";
-import FadeInScroll from "@/components/animations/collection/FadeInScroll";
 import ScaleInScroll from "@/components/animations/collection/ScaleInScroll";
 
 export default function PricingPage() {
@@ -37,7 +36,7 @@ export default function PricingPage() {
           <AnimateOnScroll delay={0.2}>
             <div className="text-center mb-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Everything You Need, Nothing You Don't
+                Everything You Need, Nothing You Don&apos;t
               </h3>
               <p className="text-gray-600">
                 All plans include our core features designed to help you succeed.

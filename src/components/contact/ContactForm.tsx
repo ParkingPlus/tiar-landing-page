@@ -134,7 +134,7 @@ export function ContactForm() {
 
             {/* Looking For */}
             <div className="space-y-2">
-                <Label htmlFor="lookingFor">I'm looking for...*</Label>
+                <Label htmlFor="lookingFor">I&apos;m looking for...*</Label>
                  <Controller
                     control={control}
                     name="lookingFor"

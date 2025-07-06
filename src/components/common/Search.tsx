@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { useRouter } from 'next/navigation';
 import { Post } from '@/types';
 import { getPosts } from '@/sanity/lib/fetch';
 import { useDebouncedCallback } from 'use-debounce';
@@ -14,7 +13,6 @@ export default function Search() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<Post[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
 
   const fetchResults = useCallback(async (searchQuery: string) => {
     if (searchQuery.length > 1) {
@@ -88,7 +86,7 @@ export default function Search() {
             ) : (
               query.length > 1 && (
                 <div className="text-center py-8">
-                  <p className="text-gray-500">No results found for "{query}"</p>
+                  <p className="text-gray-500">No results found for &quot;{query}&quot;</p>
                 </div>
               )
             )}

@@ -3,74 +3,97 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
-import { Post, Category } from "@/types";
+import { Post } from "@/types";
 import { urlForImage } from "@/sanity/lib/image";
+import type { Image as SanityImage } from "sanity";
 
 interface BlogPostProps {
   post: Post;
 }
 
+interface PortableTextProps {
+  children?: React.ReactNode;
+}
+
+interface PortableTextLinkProps {
+  children?: React.ReactNode;
+  value?: {
+    href: string;
+    blank?: boolean;
+  };
+}
+
+interface PortableTextImageProps {
+  value: {
+    alt?: string;
+    caption?: string;
+    asset: {
+      _ref: string;
+    };
+  };
+}
+
 // Custom components for PortableText
 const portableTextComponents = {
   block: {
-    normal: ({ children }: any) => (
+    normal: ({ children }: PortableTextProps) => (
       <p className="mb-6 text-lg leading-relaxed text-gray-700">{children}</p>
     ),
-    h1: ({ children }: any) => (
+    h1: ({ children }: PortableTextProps) => (
       <h1 className="text-4xl font-bold text-gray-900 mb-6 mt-8">{children}</h1>
     ),
-    h2: ({ children }: any) => (
+    h2: ({ children }: PortableTextProps) => (
       <h2 className="text-3xl font-semibold text-gray-900 mb-4 mt-8">{children}</h2>
     ),
-    h3: ({ children }: any) => (
+    h3: ({ children }: PortableTextProps) => (
       <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-6">{children}</h3>
     ),
-    h4: ({ children }: any) => (
+    h4: ({ children }: PortableTextProps) => (
       <h4 className="text-xl font-semibold text-gray-900 mb-3 mt-4">{children}</h4>
     ),
-    blockquote: ({ children }: any) => (
+    blockquote: ({ children }: PortableTextProps) => (
       <blockquote className="border-l-4 border-blue-500 pl-6 my-8 italic text-gray-700 bg-blue-50 py-4 rounded-r-lg">
         {children}
       </blockquote>
     ),
   },
   marks: {
-    strong: ({ children }: any) => (
+    strong: ({ children }: PortableTextProps) => (
       <strong className="font-semibold text-gray-900">{children}</strong>
     ),
-    em: ({ children }: any) => (
+    em: ({ children }: PortableTextProps) => (
       <em className="italic text-gray-700">{children}</em>
     ),
-    link: ({ children, value }: any) => (
+    link: ({ children, value }: PortableTextLinkProps) => (
       <a
-        href={value.href}
+        href={value?.href || '#'}
         className="text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors"
-        target={value.blank ? '_blank' : '_self'}
-        rel={value.blank ? 'noopener noreferrer' : undefined}
+        target={value?.blank ? '_blank' : '_self'}
+        rel={value?.blank ? 'noopener noreferrer' : undefined}
       >
         {children}
       </a>
     ),
   },
   list: {
-    bullet: ({ children }: any) => (
+    bullet: ({ children }: PortableTextProps) => (
       <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 ml-4">
         {children}
       </ul>
     ),
-    number: ({ children }: any) => (
+    number: ({ children }: PortableTextProps) => (
       <ol className="list-decimal list-inside mb-6 space-y-2 text-lg text-gray-700 ml-4">
         {children}
       </ol>
     ),
   },
   listItem: {
-    bullet: ({ children }: any) => <li className="mb-1">{children}</li>,
-    number: ({ children }: any) => <li className="mb-1">{children}</li>,
+    bullet: ({ children }: PortableTextProps) => <li className="mb-1">{children}</li>,
+    number: ({ children }: PortableTextProps) => <li className="mb-1">{children}</li>,
   },
   types: {
-    image: ({ value }: any) => {
-      const imageUrl = urlForImage(value).width(1200).url();
+    image: ({ value }: PortableTextImageProps) => {
+      const imageUrl = urlForImage(value as SanityImage).width(1200).url();
       const altText = value.alt || "Blog image";
 
       return (

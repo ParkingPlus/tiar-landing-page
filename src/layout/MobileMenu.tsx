@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { MenuItem, MenuItems } from "@/types";
 
 const MobileMenuItem = ({
   title,
@@ -15,7 +16,7 @@ const MobileMenuItem = ({
   onToggle,
 }: {
   title: string;
-  items: Array<{ href: string; title: string; description: string }>;
+  items: MenuItem[];
   isOpen: boolean;
   onToggle: () => void;
 }) => {
@@ -66,7 +67,7 @@ export function MobileMenu({
   openMobileSection,
   setOpenMobileSection,
 }: {
-  menuItems: any;
+  menuItems: MenuItems;
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
   openMobileSection: string | null;

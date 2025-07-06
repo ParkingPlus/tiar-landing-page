@@ -1,10 +1,9 @@
 "use client"
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Server, 
-  ShoppingCart, 
   Code, 
   Globe, 
   Smartphone, 
@@ -13,12 +12,11 @@ import {
   BarChart3,
   Settings,
   Users,
-  Shield,
   Plug
 } from 'lucide-react';
 
-const PlatformShowcase = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+export const PlatformOverview = () => {
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const platformSections = [
     {
@@ -73,7 +71,7 @@ const PlatformShowcase = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -83,7 +81,7 @@ const PlatformShowcase = () => {
     }
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { 
       opacity: 0, 
       y: 20,
@@ -108,16 +106,16 @@ const PlatformShowcase = () => {
     }
   };
 
-  const renderMockup = (type: string, isHovered: boolean) => {
-    const mockupVariants = {
-      hidden: { opacity: 0, scale: 0.8 },
-      visible: { 
-        opacity: 1, 
-        scale: 1,
-        transition: { delay: 0.2 }
-      }
-    };
+  const mockupVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { delay: 0.2 }
+    }
+  };
 
+  const renderMockup = (type: string, isHovered: boolean) => {
     switch (type) {
       case 'dashboard':
         return (
@@ -184,13 +182,13 @@ const PlatformShowcase = () => {
             initial="hidden"
             animate={isHovered ? "visible" : "hidden"}
           >
-            <div className="text-green-400 mb-1">// EV Charging API</div>
+            <div className="text-green-400 mb-1">{'// EV Charging API'}</div>
             <div className="text-blue-400 mb-1">GET /api/v1/charging-sessions</div>
             <div className="text-gray-400 mb-1">{"{"}</div>
-            <div className="text-white ml-2 mb-1">"sessionId": "cs_123",</div>
-            <div className="text-white ml-2 mb-1">"status": "active",</div>
-            <div className="text-white ml-2 mb-1">"power": 50.5,</div>
-            <div className="text-white ml-2">"duration": 1847</div>
+            <div className="text-white ml-2 mb-1">&quot;sessionId&quot;: &quot;cs_123&quot;,</div>
+            <div className="text-white ml-2 mb-1">&quot;status&quot;: &quot;active&quot;,</div>
+            <div className="text-white ml-2 mb-1">&quot;power&quot;: 50.5,</div>
+            <div className="text-white ml-2">&quot;duration&quot;: 1847</div>
             <div className="text-gray-400">{"}"}</div>
           </motion.div>
         );
@@ -359,4 +357,4 @@ const PlatformShowcase = () => {
   );
 };
 
-export default PlatformShowcase;
+export default PlatformOverview;

@@ -12,7 +12,7 @@ interface CallToActionProps {
     subtitle?: string;
     description?: string;
     buttons: CTAButton[];
-    backgroundColor?: "blue" | "green" | "purple" | "gradient";
+    backgroundColor?: "blue" | "green" | "purple" | "gradient" | "white";
 }
 
 export const CallToAction = ({ 
@@ -30,6 +30,8 @@ export const CallToAction = ({
                 return "bg-gradient-to-r from-green-600 to-green-800";
             case "purple":
                 return "bg-gradient-to-r from-purple-600 to-purple-800";
+            case "white":
+                return "bg-white";
             default:
                 return "bg-gradient-to-r from-brand-500 to-brand-900";
         }

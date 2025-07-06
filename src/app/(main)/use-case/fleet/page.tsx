@@ -7,7 +7,6 @@ import { Statistics } from "@/components/common/StatisticsBanner";
 import FleetTypes from "@/components/use-case/fleet/FleetTypes";
 import { CallToAction } from "@/components/common/CallToAction";
 import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
-import PlatformOverview from "@/components/common/PlatformOverview";
 import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
 import FadeInScroll from "@/components/animations/collection/FadeInScroll";
 import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
@@ -86,7 +85,7 @@ const benefits = [
     {
         title: "Scalable Infrastructure",
         description: "Easily expand your charging network as your fleet grows, with modular solutions that adapt to your needs",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.unsplash.com/photo-1581094794329-5753a4795fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         imageAlt: "Scaling infrastructure"
     }
 ];

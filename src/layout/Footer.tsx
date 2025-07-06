@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { menuItems } from '@/data/menuItem'; // adjust the path as needed
+import { menuItems, MenuItem } from '@/data/menuItem'; // adjust the path as needed
 import Logo from '@/assets/tiar/logo-dark.svg';
 
 export function Footer() {
@@ -39,7 +39,7 @@ export function Footer() {
                 : sectionKey}
             </h4>
             <ul className="space-y-2">
-              {items.map((item) => (
+              {items.map((item: MenuItem) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

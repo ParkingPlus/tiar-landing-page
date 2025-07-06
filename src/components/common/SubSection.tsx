@@ -67,7 +67,7 @@ export function SubSection({
               "md:order-first": imagePosition === 'left',
             })}
           >
-            {/* Replaced Next.js Image with standard img tag to resolve compile error */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imageUrl}
               alt={imageAlt}
