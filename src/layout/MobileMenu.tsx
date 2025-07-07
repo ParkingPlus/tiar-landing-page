@@ -124,22 +124,18 @@ export function MobileMenu({
           </nav>
 
           {/* CTA Buttons */}
-          <div className="py-4 px-6 border-t bg-white flex gap-2">
-            <Link href="/pricing">
+          <div className="py-4 px-6 border-t bg-white flex flex-col gap-2">
+            <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
               <Button
                 variant="outline"
-                className="w-1/2 border-brand-500 text-brand-600"
-                onClick={() => setMobileMenuOpen(false)}
+                className="w-full border-brand-500 text-brand-600 hover:bg-brand-50 rounded-xl"
               >
                 Pricing
               </Button>
             </Link>
-            <Link href="/contact">
-            <Button
-              className="w-1/2 bg-brand-500 hover:bg-brand-600 text-white"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-                Book Live Demo
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-brand-500 hover:bg-brand-600 text-white rounded-xl">
+                Contact Us
               </Button>
             </Link>
           </div>
