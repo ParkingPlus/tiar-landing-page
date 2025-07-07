@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { PopupButton, PopupWidget, InlineWidget } from "react-calendly";
 
-const url = "https://calendly.com/releasethebeast00/30min";
+const url = process.env.NEXT_PUBLIC_CALENDLY_URL || "";
 
 const useRootElement = () => {
   const [root, setRoot] = useState<HTMLElement | null>(null);

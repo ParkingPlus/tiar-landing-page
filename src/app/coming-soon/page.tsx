@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     description: "Something new is coming! Stay tuned for our latest features and solutions.",
 };
 
-const ctaButton = [{ text: "Join the Waitlist", variant: "default" as const }, { text: "Contact Us", variant: "outline" as const }]
+const ctaButton = [{ text: "Contact Us", variant: "outline" as const, href: "/contact" }]
 
 export default function ComingSoonPage() {
     return (

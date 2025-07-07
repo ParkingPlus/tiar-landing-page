@@ -2,12 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mountain, Menu, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
+import { Menu, ChevronRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { MenuItem, MenuItems } from "@/types";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import type { MenuItem, MenuItems } from "@/types";
+import Image from 'next/image';
+import Logo from '@/assets/tiar/logo.svg'; // convert it to PNG
 
 const MobileMenuItem = ({
   title,
@@ -24,7 +26,7 @@ const MobileMenuItem = ({
     <div className="border-b border-gray-200">
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-4 text-left text-sm font-semibold text-gray-900 hover:text-brand-600"
+        className="flex w-full items-center justify-between py-4 text-sm font-semibold text-gray-900 hover:text-brand-600"
       >
         {title}
         <ChevronRight
@@ -47,10 +49,13 @@ const MobileMenuItem = ({
               <Link
                 key={index}
                 href={item.href}
+                onClick={() => window.scrollTo(0, 0)}
                 className="block py-2 text-sm text-gray-700 hover:text-brand-600"
               >
                 <div className="font-medium">{item.title}</div>
-                <div className="text-xs text-gray-500 mt-1">{item.description}</div>
+                {item.description && (
+                  <div className="text-xs text-gray-500 mt-1">{item.description}</div>
+                )}
               </Link>
             ))}
           </motion.div>
@@ -83,7 +88,7 @@ export function MobileMenu({
       </SheetTrigger>
       <SheetContent
         side="right"
-        className="w-full max-w-sm sm:max-w-sm bg-white shadow-xl border-none h-screen p-0"
+        className="w-full max-w-sm bg-white shadow-xl border-none h-screen p-0"
       >
         <motion.div
           initial={{ x: "100%" }}
@@ -92,72 +97,51 @@ export function MobileMenu({
           transition={{ duration: 0.3 }}
           className="flex flex-col h-full"
         >
+          {/* Logo Section */}
           <div className="flex items-center justify-between py-4 px-6 border-b">
             <Link
               href="/"
-              className="flex items-center space-x-2"
+              className="flex items-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <Mountain className="h-6 w-6 text-brand-600" />
-              <span className="font-bold text-brand-600 text-lg">Tiar</span>
+              <Image src={Logo} alt="TIAR" width={124} height={124} />
             </Link>
           </div>
 
+          {/* Menu Items */}
           <nav className="flex-1 py-2 px-4 overflow-y-auto">
-            <MobileMenuItem
-              title="About Us"
-              items={menuItems.aboutUs}
-              isOpen={openMobileSection === "aboutUs"}
-              onToggle={() =>
-                setOpenMobileSection(
-                  openMobileSection === "aboutUs" ? null : "aboutUs"
-                )
-              }
-            />
-            <MobileMenuItem
-              title="Use Case"
-              items={menuItems.useCase}
-              isOpen={openMobileSection === "useCase"}
-              onToggle={() =>
-                setOpenMobileSection(
-                  openMobileSection === "useCase" ? null : "useCase"
-                )
-              }
-            />
-            <MobileMenuItem
-              title="Offerings"
-              items={menuItems.offerings}
-              isOpen={openMobileSection === "offerings"}
-              onToggle={() =>
-                setOpenMobileSection(
-                  openMobileSection === "offerings" ? null : "offerings"
-                )
-              }
-            />
-            <MobileMenuItem
-              title="Resources"
-              items={menuItems.resources}
-              isOpen={openMobileSection === "resources"}
-              onToggle={() =>
-                setOpenMobileSection(openMobileSection === "resources" ? null : "resources")
-              }
-            />
+            {Object.entries(menuItems).map(([sectionKey, sectionItems]) => (
+              <MobileMenuItem
+                key={sectionKey}
+                title={sectionKey.replace(/([A-Z])/g, " $1").replace(/^./, (s) => s.toUpperCase())}
+                items={sectionItems}
+                isOpen={openMobileSection === sectionKey}
+                onToggle={() =>
+                  setOpenMobileSection(openMobileSection === sectionKey ? null : sectionKey)
+                }
+              />
+            ))}
           </nav>
 
+          {/* CTA Buttons */}
           <div className="py-4 px-6 border-t bg-white flex gap-2">
-            <Button
-              variant="outline"
-              className="w-1/2 border-brand-500 text-brand-600"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact Us
-            </Button>
+            <Link href="/pricing">
+              <Button
+                variant="outline"
+                className="w-1/2 border-brand-500 text-brand-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Pricing
+              </Button>
+            </Link>
+            <Link href="/contact">
             <Button
               className="w-1/2 bg-brand-500 hover:bg-brand-600 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book Live Demo
-            </Button>
+                Book Live Demo
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </SheetContent>

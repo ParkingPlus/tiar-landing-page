@@ -52,8 +52,7 @@ const benefitsData = [
 ];
 
 const ctaButtons = [
-    { text: "Schedule a Demo", variant: "default" as const },
-    { text: "View Use Cases", variant: "outline" as const }
+    { text: "Contact Us", variant: "outline" as const, href: "/contact" }
 ];
 
 export default function BenefitsPage() {

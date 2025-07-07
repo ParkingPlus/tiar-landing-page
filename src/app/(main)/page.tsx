@@ -52,8 +52,10 @@ const stats = [
 ];
 
 const ctaButtons = [
-    { text: "Schedule a Demo", variant: "default" as const },
-    { text: "Explore Solutions", variant: "outline" as const }
+    { text: "Contact Us",
+      variant: "outline" as const,
+      href: "/contact"
+    }
 ];
 
 export default function Home() {

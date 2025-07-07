@@ -91,7 +91,7 @@ const benefits = [
   },
 ];
 
-const ctaButton = [{ text: "Request a Demo", variant: "outline" as const }];
+const ctaButton = [{ text: "Contact Us", variant: "outline" as const, href: "/contact" }];
 
 export default function CPOPage() {
   return (

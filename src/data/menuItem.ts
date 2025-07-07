@@ -28,6 +28,6 @@ export const menuItems: MenuItems = {
   resources: [
     { href: "/blog", title: "Blog", description: "Read our latest insights and news.", imageUrl: "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.co/600x400/fffaeb/7a2e0e", imageAlt: "Collage of blog post preview images" },
     { href: "/coming-soon", title: "Case Studies", description: "Real-world success stories from our clients.", imageUrl: "https://plus.unsplash.com/premium_photo-1661761077411-d50cba031848?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", imageAlt: "Customer logo and a quote" },
-    { href: "/documentation", title: "Documentation", description: "Technical guides and API references.", imageUrl: "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", imageAlt: "Code snippet on a screen" }
+    { href: "/coming-soon", title: "Documentation", description: "Technical guides and API references.", imageUrl: "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", imageAlt: "Code snippet on a screen" }
   ]
 };

@@ -60,8 +60,7 @@ const appGalleryViews = [
 ];
 
 const ctaButtons = [
-    { text: "Request a Demo App", variant: "default" as const },
-    { text: "Contact Sales", variant: "outline" as const }
+    { text: "Contact Us", variant: "outline" as const, href: "/contact" }
 ];
 
 // Revised steps data to include the new launch strategy

@@ -104,7 +104,7 @@ const testDriveFeatures = [
     },
 ]
 
-const ctaButton = [{ text: "Get a Custom Quote", variant: "default" as const }, { text: "Contact Us", variant: "outline" as const }]
+const ctaButton = [{ text: "Contact Us", variant: "outline" as const, href: "/contact" }]
 
 export default function ShowroomPage() {
     return (

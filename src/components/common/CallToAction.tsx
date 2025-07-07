@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import AnimationWrapper from "../animations/AnimationWrapper";
+import Link from "next/link"; // assuming you're using Next.js
 
 interface CTAButton {
     text: string;
-    variant?: "default" | "secondary" | "outline";
-    onClick?: () => void;
+    variant?: "default" | "secondary" | "outline" | "ghost";
+    href: string;
 }
 
 interface CallToActionProps {
@@ -53,32 +54,34 @@ export const CallToAction = ({
     return (
         <section className={`py-16 ${getBackgroundClass()} text-white`}>
             <AnimationWrapper animation="scale" delay={0.2} duration={0.8}>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl font-bold mb-4">{title}</h2>
-                {subtitle && (
-                    <p className={`text-xl mb-8 ${getAccentClass()}`}>{subtitle}</p>
-                )}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    {buttons.map((button, index) => (
-                        <Button
-                            key={index}
-                            size="lg"
-                            variant={button.variant || "secondary"}
-                            onClick={button.onClick}
-                            className={
-                                button.variant === "outline"
-                                    ? "border-white text-white hover:bg-white hover:text-brand-600"
-                                    : button.variant === "secondary"
-                                    ? "text-brand-600 hover:text-brand-700"
-                                    : ""
-                            }
-                        >
-                            {button.text}
-                        </Button>
-                    ))}
-                </div>
-                {description && (
-                    <p className={`mt-6 text-sm ${getAccentClass()}`}>{description}</p>
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-3xl font-bold mb-4">{title}</h2>
+                    {subtitle && (
+                        <p className={`text-xl mb-8 ${getAccentClass()}`}>{subtitle}</p>
+                    )}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        {buttons.map((button, index) => (
+                            <Link key={index} href={button.href} passHref>
+                                <Button
+                                    size="lg"
+                                    variant={button.variant || "secondary"}
+                                    className={
+                                        button.variant === "outline"
+                                            ? "font-bold border-white text-white hover:bg-white hover:text-brand-600"
+                                            : button.variant === "secondary"
+                                            ? "font-bold text-brand-600 hover:text-brand-700"
+                                            : button.variant === "ghost"
+                                            ? "font-bold text-brand-600 hover:text-brand-700"
+                                            : ""
+                                    }
+                                >
+                                    {button.text}
+                                </Button>
+                            </Link>
+                        ))}
+                    </div>
+                    {description && (
+                        <p className={`mt-6 text-sm ${getAccentClass()}`}>{description}</p>
                     )}
                 </div>
             </AnimationWrapper>

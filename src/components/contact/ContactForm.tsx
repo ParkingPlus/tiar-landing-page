@@ -41,7 +41,7 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 // IMPORTANT: Replace with your actual Web3Forms access key
-const WEB3FORMS_ACCESS_KEY = "9916e388-fb3f-45cb-99a1-7338a8e2a710";
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -73,7 +73,7 @@ export function ContactForm() {
     setIsSubmitting(true);
     
     const formData = new FormData();
-    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    formData.append("access_key", WEB3FORMS_ACCESS_KEY || "");
     formData.append("subject", "New Contact Form Submission from Tiar");
     formData.append("from_name", "Tiar Contact Form");
     formData.append("replyto", data.email);

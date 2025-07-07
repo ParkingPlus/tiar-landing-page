@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { NavigationMenuLink } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 import Logo from '@/assets/tiar/logo.svg';
+import { CPopupButton } from '@/components/contact/Calendly';
 
 interface MenuItem {
   href: string;
@@ -142,12 +143,9 @@ export function MegaMenu({
                   </Link>
                 </p>
                 <div className="flex gap-3">
-                  <Link 
-                    href="/demo" 
-                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-brand-600 bg-white rounded-md border border-brand-200 hover:bg-brand-50 transition-colors"
-                  >
-                    Schedule Demo
-                  </Link>
+                  <div className="inline-flex items-center px-4 py-2 text-sm font-medium text-brand-600 bg-white rounded-md border border-brand-200 hover:bg-brand-50 transition-colors">
+                    <CPopupButton />
+                  </div>
                   <Link 
                     href="/pricing" 
                     className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-brand-600 rounded-md hover:bg-brand-700 transition-colors"

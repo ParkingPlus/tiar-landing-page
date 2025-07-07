@@ -90,7 +90,7 @@ const benefits = [
     }
 ];
 
-const ctaButton = [{ text: "Let's discuss!", variant: "outline" as const }]
+const ctaButton = [{ text: "Contact Us", variant: "outline" as const, href: "/contact" }]
 
 export default function FleetPage() {
     return (

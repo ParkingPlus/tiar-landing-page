@@ -40,7 +40,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               {items.map((item: MenuItem) => (
-                <li key={item.href}>
+                <li key={item.title}>
                   <Link
                     href={item.href}
                     className="text-sm text-white/80 hover:text-white transition-colors"

@@ -49,8 +49,7 @@ const featuresData = [
 ];
 
 const ctaButtons = [
-    { text: "Schedule a Live Demo", variant: "default" as const },
-    { text: "View Pricing", variant: "outline" as const }
+    { text: "Contact Us", variant: "outline" as const, href: "/contact" }
 ];
 
 const galleryViews = [

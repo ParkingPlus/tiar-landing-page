@@ -81,7 +81,7 @@ const benefits = [
     }
 ];
 
-const ctaButton = [{ text: "Join the Waitlist", variant: "default" as const }, { text: "Become a Launch Partner", variant: "outline" as const }]
+const ctaButton = [{ text: "Contact Us", variant: "outline" as const, href: "/contact" }]
 
 export default function EScooterPage() {
     return (

@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 };
 
 const ctaButtons = [
-    { text: "Explore Our Solutions", variant: "default" as const },
-    { text: "Join Our Team", variant: "outline" as const }
+    { text: "Explore Our Solutions", variant: "default" as const, href: "/pricing" },
+    { text: "Contact Us", variant: "outline" as const, href: "/contact" }
 ];
 
 export default function MissionVisionPage() {
