@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Check, X, ArrowRight } from 'lucide-react';
 import { pricingPlans, pricingFeatures } from '@/data/pricing';
-import type { PricingFeature } from '@/data/pricing';
 
 const FeatureIcon = ({ value }: { value: string | boolean }) => {
   if (typeof value === 'boolean') {
@@ -127,7 +126,7 @@ export default function PricingComparison() {
       {/* Bottom CTA */}
       <div className="text-center mt-12">
         <p className="text-gray-600 mb-4">
-          Need a custom solution? We're here to help.
+          Need a custom solution? We&apos;re here to help.
         </p>
         <Button variant="outline">
           Contact Sales

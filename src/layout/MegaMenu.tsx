@@ -3,18 +3,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { NavigationMenuLink } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import Logo from '@/assets/tiar/logo.svg';
-
-interface MenuItem {
-  href: string;
-  title: string;
-  description: string;
-  imageUrl?: string;
-  imageAlt?: string;
-}
+import logo from '@/assets/Tiar/logo.svg';
+import { MenuItem } from '@/data/menuItem';
 
 interface MegaMenuProps {
-  title: string;
   items: MenuItem[];
   showBrand?: boolean;
   columns?: number;
@@ -56,7 +48,7 @@ const ImagePreview = ({ item }: { item: MenuItem | null }) => {
   return (
     <div className="hidden lg:block sticky top-24 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 h-full">
       <div className="relative w-full" style={{ paddingTop: '56.25%' }}> {/* 16:9 Aspect Ratio */}
-        <img src={item.imageUrl} alt={item.imageAlt || ''} className="absolute top-0 left-0 w-full h-full object-cover" />
+        <Image src={item.imageUrl} alt={item.imageAlt || ''} className="absolute top-0 left-0 w-full h-full object-cover" width={600} height={400} />
       </div>
       <div className="p-6">
         <h3 className="font-bold text-lg text-gray-900">{item.title}</h3>
@@ -70,7 +62,6 @@ const ImagePreview = ({ item }: { item: MenuItem | null }) => {
 };
 
 export function MegaMenu({ 
-  title, 
   items, 
   showBrand = false, 
   columns = 2,
@@ -99,7 +90,7 @@ export function MegaMenu({
                       href="/"
                       className="flex flex-col justify-center rounded-lg bg-gradient-to-br from-brand-100 to-brand-200 p-6 h-full no-underline outline-none focus:shadow-md hover:shadow-md transition-shadow"
                     >
-                      <Image src={Logo} alt="logo" width={150} height={150} className="mb-3" />
+                      <Image src={logo} alt="logo" width={150} height={150} className="mb-3" />
                       <p className="text-sm leading-relaxed text-gray-700">
                         All-in-One EV Charging Management System.
                       </p>

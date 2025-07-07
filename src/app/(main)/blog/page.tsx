@@ -13,22 +13,12 @@ export const metadata: Metadata = {
     description: "Insights, news, and stories from the team at Tiar.",
 };
 
-interface BlogPageProps {
-  searchParams: {
-    page?: string;
-    category?: string;
-    sortBy?: string;
-  };
-}
-
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const page = Number(searchParams.page) || 1;
-  const category = searchParams.category || 'all';
-  const sortBy = searchParams.sortBy || 'newest';
+export default async function BlogPage({ searchParams }: { searchParams: Promise<{ page?: string; category?: string; sortBy?: string }> }) {
+  const { page = "1", category = "all", sortBy = "newest" } = await searchParams;
 
   // Fetch all posts (newest first by default) and all categories
   const [{ posts, total }, categories] = await Promise.all([
-    getPosts({ page, category, sortBy, postsPerPage: POSTS_PER_PAGE }),
+    getPosts({ page: Number(page), category, sortBy, postsPerPage: POSTS_PER_PAGE }),
     getCategories(),
   ]);
   
@@ -48,7 +38,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             <div className="mt-12">
                 <Pagination 
                     totalPages={totalPages}
-                    currentPage={page}
+                    currentPage={Number(page)}
                     basePath="/blog"
                 />
             </div>

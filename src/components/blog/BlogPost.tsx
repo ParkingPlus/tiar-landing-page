@@ -1,10 +1,14 @@
 // components/BlogPost.tsx
-import { PortableText } from "next-sanity";
+import { PortableText, PortableTextReactComponents } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 import { Calendar, User, Tag, ArrowLeft } from "lucide-react";
-import { Post, Category } from "@/types";
+import { Post } from "@/types";
 import { urlForImage } from "@/sanity/lib/image";
+
+type PortableTextComponent = {
+  children: React.ReactNode;
+};
 
 interface BlogPostProps {
   post: Post;
@@ -13,35 +17,35 @@ interface BlogPostProps {
 // Custom components for PortableText
 const portableTextComponents = {
   block: {
-    normal: ({ children }: any) => (
+    normal: ({ children }: PortableTextComponent) => (
       <p className="mb-6 text-lg leading-relaxed text-gray-700">{children}</p>
     ),
-    h1: ({ children }: any) => (
+    h1: ({ children }: PortableTextComponent) => (
       <h1 className="text-4xl font-bold text-gray-900 mb-6 mt-8">{children}</h1>
     ),
-    h2: ({ children }: any) => (
+    h2: ({ children }: PortableTextComponent) => (
       <h2 className="text-3xl font-semibold text-gray-900 mb-4 mt-8">{children}</h2>
     ),
-    h3: ({ children }: any) => (
+    h3: ({ children }: PortableTextComponent) => (
       <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-6">{children}</h3>
     ),
-    h4: ({ children }: any) => (
+    h4: ({ children }: PortableTextComponent) => (
       <h4 className="text-xl font-semibold text-gray-900 mb-3 mt-4">{children}</h4>
     ),
-    blockquote: ({ children }: any) => (
+    blockquote: ({ children }: PortableTextComponent) => (
       <blockquote className="border-l-4 border-blue-500 pl-6 my-8 italic text-gray-700 bg-blue-50 py-4 rounded-r-lg">
         {children}
       </blockquote>
     ),
   },
   marks: {
-    strong: ({ children }: any) => (
+    strong: ({ children }: PortableTextComponent) => (
       <strong className="font-semibold text-gray-900">{children}</strong>
     ),
-    em: ({ children }: any) => (
+    em: ({ children }: PortableTextComponent) => (
       <em className="italic text-gray-700">{children}</em>
     ),
-    link: ({ children, value }: any) => (
+    link: ({ children, value }: PortableTextComponent & { value: { href: string; blank: boolean } }) => (
       <a
         href={value.href}
         className="text-blue-600 hover:text-blue-800 underline underline-offset-2 transition-colors"
@@ -53,23 +57,23 @@ const portableTextComponents = {
     ),
   },
   list: {
-    bullet: ({ children }: any) => (
+    bullet: ({ children }: PortableTextComponent) => (
       <ul className="list-disc list-inside mb-6 space-y-2 text-lg text-gray-700 ml-4">
         {children}
       </ul>
     ),
-    number: ({ children }: any) => (
+    number: ({ children }: PortableTextComponent) => (
       <ol className="list-decimal list-inside mb-6 space-y-2 text-lg text-gray-700 ml-4">
         {children}
       </ol>
     ),
   },
   listItem: {
-    bullet: ({ children }: any) => <li className="mb-1">{children}</li>,
-    number: ({ children }: any) => <li className="mb-1">{children}</li>,
+    bullet: ({ children }: PortableTextComponent) => <li className="mb-1">{children}</li>,
+    number: ({ children }: PortableTextComponent) => <li className="mb-1">{children}</li>,
   },
   types: {
-    image: ({ value }: any) => {
+    image: ({ value }: PortableTextComponent & { value: { alt: string; caption: string } }) => {
       const imageUrl = urlForImage(value).width(1200).url();
       const altText = value.alt || "Blog image";
 
@@ -188,7 +192,7 @@ export default function BlogPost({ post }: BlogPostProps) {
             <div className="prose prose-lg prose-gray max-w-none">
               <PortableText 
                 value={post.body} 
-                components={portableTextComponents}
+                components={portableTextComponents as unknown as PortableTextReactComponents}
               />
             </div>
           ) : (

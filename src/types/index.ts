@@ -1,3 +1,5 @@
+import { PortableTextBlock } from '@portabletext/types';
+
 export interface Post {
   _id: string;
   title: string;
@@ -10,11 +12,11 @@ export interface Post {
       url: string;
     };
   };
-  imageURL: any;
+  imageURL: string;
   authorName?: string;
   categories: Category[];
   _createdAt: string;
-  body: any; // Sanity's Portable Text
+  body: PortableTextBlock[];
 }
 
 export interface Category {

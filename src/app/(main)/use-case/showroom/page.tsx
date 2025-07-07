@@ -1,6 +1,6 @@
 import { Hero } from "@/components/common/Hero";
 import { SubSection } from "@/components/common/SubSection";
-import { Car, Zap, TrendingUp, Shield, Wrench, Users, Presentation, Gift, Sparkles, BatteryCharging, Scale } from "lucide-react";
+import { Car, Zap, TrendingUp, Shield, Wrench, Users, Presentation, Gift, Sparkles, BatteryCharging } from "lucide-react";
 import { Metadata } from "next";
 import { KeyFeatures } from "@/components/common/KeyFeatures";
 import { Statistics } from "@/components/common/StatisticsBanner";

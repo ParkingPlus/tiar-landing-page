@@ -16,7 +16,6 @@ import FadeInScroll from "@/components/animations/collection/FadeInScroll";
 import ScaleInScroll from "@/components/animations/collection/ScaleInScroll";
 import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";
 import BlurInScroll from "@/components/animations/collection/BlurInScroll";
-import AnimationWrapper from "@/components/animations/AnimationWrapper";
 
 export const metadata: Metadata = {
   title: "TIAR: The Operating System for Electric Mobility",
@@ -124,7 +123,7 @@ export default function Home() {
         title="Proven Results, Trusted by Leaders"
         subtitle="Our platform is battle-tested and trusted by a growing network of partners across the globe."
         statistics={stats}
-        backgroundColor="gray"
+        backgroundColor="green"
       />
 
       {/* About section with fade animation */}

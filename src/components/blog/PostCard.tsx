@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Post } from '@/types';
-import { urlForImage } from '@/sanity/lib/image';
 import { formatDate } from '@/lib/utils';
+import Image from 'next/image';
 
 interface PostCardProps {
   post: Post;
@@ -15,8 +15,10 @@ export default function PostCard({ post }: PostCardProps) {
         <div className="relative w-full max-h-[220px] aspect-[3/2] overflow-hidden">
           {post.mainImage ? (
             <>
-              <img
-                src={urlForImage(post.imageURL).width(800).height(533).url()}
+              <Image
+                src={post.imageURL}
+                width={800}
+                height={533}
                 alt={post.title}
                 className="absolute top-0 left-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
               />

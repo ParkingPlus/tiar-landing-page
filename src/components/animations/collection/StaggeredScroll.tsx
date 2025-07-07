@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Easing } from 'framer-motion';
 import { ReactNode } from 'react';
 
 interface StaggeredScrollProps {
@@ -29,13 +29,13 @@ export default function StaggeredScroll({
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1.0]
-      }
+        ease: [0.25, 0.1, 0.25, 1.0] as Easing, // ✅ Type-safe
+      },
     },
   };
 
@@ -54,9 +54,7 @@ export default function StaggeredScroll({
           </motion.div>
         ))
       ) : (
-        <motion.div variants={item}>
-          {children}
-        </motion.div>
+        <motion.div variants={item}>{children}</motion.div>
       )}
     </motion.div>
   );

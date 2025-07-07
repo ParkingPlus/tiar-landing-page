@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils'; // Assuming you have a utility for classnames
-
+import Image from 'next/image';
 /**
  * @typedef {object} SubSectionProps
  * @property {string} eyebrow - The small, capitalized text above the title (e.g., "REPORTS & ANALYTICS").
@@ -68,11 +68,13 @@ export function SubSection({
             })}
           >
             {/* Replaced Next.js Image with standard img tag to resolve compile error */}
-            <img
+            <Image
               src={imageUrl}
               alt={imageAlt}
               className="rounded-lg shadow-2xl object-cover w-full h-auto max-w-full"
               style={{ maxWidth: '600px' }}
+              width={600}
+              height={400}
             />
           </div>
         </div>

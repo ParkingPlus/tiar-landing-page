@@ -23,7 +23,7 @@ export default function ComingSoonPage() {
                 subtitle="Don't miss out! Join our waitlist for exclusive early access, special launch promotions, and to be part of our journey from day one."
                 buttons={ctaButton}
                 description="No spam, we promise. Only important updates."
-                backgroundColor="white"
+                backgroundColor="green"
             />
         </main>
     )

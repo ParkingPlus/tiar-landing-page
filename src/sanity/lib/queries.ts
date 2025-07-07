@@ -90,5 +90,5 @@ export const latestPostsQuery = groq`*[_type == "post"] | order(_createdAt desc)
 
 // Get all post slugs for generating static paths
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
-    "params": { "slug": slug.current }
+    "slug": slug.current
   }`;

@@ -1,4 +1,4 @@
-import { BatteryCharging, Cast, Sparkles } from "lucide-react";
+import { BatteryCharging, Sparkles } from "lucide-react";
 
 const features = [
     {

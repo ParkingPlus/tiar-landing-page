@@ -134,14 +134,14 @@ export function ContactForm() {
 
             {/* Looking For */}
             <div className="space-y-2">
-                <Label htmlFor="lookingFor">I'm looking for...*</Label>
+                <Label htmlFor="lookingFor">I&apos;m looking for...*</Label>
                  <Controller
                     control={control}
                     name="lookingFor"
                     render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
                             <SelectTrigger id="lookingFor">
-                                <SelectValue placeholder="Select what you're looking for" />
+                                <SelectValue placeholder="Select what you&apos;re looking for" />
                             </SelectTrigger>
                             <SelectContent>
                                 {lookingFor.map((option) => (

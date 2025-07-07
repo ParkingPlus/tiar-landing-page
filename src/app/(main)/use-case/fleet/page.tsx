@@ -7,7 +7,6 @@ import { Statistics } from "@/components/common/StatisticsBanner";
 import FleetTypes from "@/components/use-case/fleet/FleetTypes";
 import { CallToAction } from "@/components/common/CallToAction";
 import { BenefitsCarousel } from "@/components/common/BenefitsCarousel";
-import PlatformOverview from "@/components/common/PlatformOverview";
 import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
 import FadeInScroll from "@/components/animations/collection/FadeInScroll";
 import StaggeredScroll from "@/components/animations/collection/StaggeredScroll";

@@ -62,7 +62,7 @@ export default function BenefitsPage() {
             <Hero
                 eyebrow="The TIAR Advantage"
                 header="More Than a Platform. A Partnership for Growth."
-                caption="Your success is our obsession. We've built a charging management system that combines robust, in-house technology with the strategic insights of an experienced operator. Partner with us to build a profitable and scalable charging network."
+                caption="Your success is our obsession. We&apos;ve built a charging management system that combines robust, in-house technology with the strategic insights of an experienced operator. Partner with us to build a profitable and scalable charging network."
                 images={['https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
             />
             
@@ -80,7 +80,7 @@ export default function BenefitsPage() {
                     <Lightbulb className="mx-auto h-12 w-12 text-gray-400" />
                     <figure className="mt-6">
                         <blockquote className="text-xl font-semibold leading-8 tracking-tight text-gray-900 sm:text-2xl sm:leading-9">
-                            <p>“TIAR wasn't just a software provider; they were our launch partner. Their operational insights saved us months of trial-and-error, and their platform allowed our small team to perform like a major player from day one.”</p>
+                            <p>“TIAR wasn&apos;t just a software provider; they were our launch partner. Their operational insights saved us months of trial-and-error, and their platform allowed our small team to perform like a major player from day one.”</p>
                         </blockquote>
                         <figcaption className="mt-8">
                             <div className="text-base">
@@ -105,7 +105,7 @@ export default function BenefitsPage() {
             
             <CallToAction
                 title="Ready to See the Difference?"
-                subtitle="Let's discuss how the TIAR advantage can help you achieve your business goals. Schedule a personalized demo with one of our experts today."
+                subtitle="Let&apos;s discuss how the TIAR advantage can help you achieve your business goals. Schedule a personalized demo with one of our experts today."
                 buttons={ctaButtons}
                 backgroundColor="green"
             />

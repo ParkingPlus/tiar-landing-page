@@ -1,6 +1,6 @@
 import { Hero } from "@/components/common/Hero";
 import { SubSection } from "@/components/common/SubSection";
-import { DollarSign, Zap, BarChart3, Shield, Users, TrendingUp, Building } from "lucide-react";
+import { Zap, BarChart3, Shield, Users, TrendingUp, Building } from "lucide-react";
 import { Metadata } from "next";
 import { KeyFeatures } from "@/components/common/KeyFeatures";
 import { Statistics } from "@/components/common/StatisticsBanner";
@@ -163,7 +163,7 @@ export default function PropertyOwnersPage() {
                 title="Latest News"
                 subtitle="Stay up to date with the latest news and updates from our team."
                 category="Property Owners"
-            />
+            />  
         </main>
     );
 }

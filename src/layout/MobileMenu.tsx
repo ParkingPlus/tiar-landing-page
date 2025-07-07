@@ -66,7 +66,12 @@ export function MobileMenu({
   openMobileSection,
   setOpenMobileSection,
 }: {
-  menuItems: any;
+  menuItems: {
+    aboutUs: Array<{ href: string; title: string; description: string }>;
+    useCase: Array<{ href: string; title: string; description: string }>;
+    offerings: Array<{ href: string; title: string; description: string }>;
+    resources: Array<{ href: string; title: string; description: string }>;
+  };
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
   openMobileSection: string | null;

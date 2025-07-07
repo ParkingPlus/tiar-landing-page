@@ -13,7 +13,7 @@ export function MissionVisionBlock() {
                             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Mission</h2>
                         </div>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            To build Indonesia's most intelligent and reliable charging management software, empowering operators to build thriving businesses and making EV adoption effortless for everyone.
+                            To build Indonesia&apos;s most intelligent and reliable charging management software, empowering operators to build thriving businesses and making EV adoption effortless for everyone.
                         </p>
                     </div>
                     <div className="flex flex-col items-start">

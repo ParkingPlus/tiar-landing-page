@@ -1,10 +1,9 @@
 "use client"
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Easing } from 'framer-motion';
 import { 
   Server, 
-  ShoppingCart, 
   Code, 
   Globe, 
   Smartphone, 
@@ -13,12 +12,11 @@ import {
   BarChart3,
   Settings,
   Users,
-  Shield,
   Plug
 } from 'lucide-react';
 
 const PlatformShowcase = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const platformSections = [
     {
@@ -95,7 +93,7 @@ const PlatformShowcase = () => {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
+        ease: "easeOut" as Easing
       }
     },
     hover: {
@@ -103,7 +101,7 @@ const PlatformShowcase = () => {
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: "easeOut" as Easing
       }
     }
   };
@@ -184,13 +182,13 @@ const PlatformShowcase = () => {
             initial="hidden"
             animate={isHovered ? "visible" : "hidden"}
           >
-            <div className="text-green-400 mb-1">// EV Charging API</div>
+            <div className="text-green-400 mb-1">EV Charging API</div>
             <div className="text-blue-400 mb-1">GET /api/v1/charging-sessions</div>
             <div className="text-gray-400 mb-1">{"{"}</div>
-            <div className="text-white ml-2 mb-1">"sessionId": "cs_123",</div>
-            <div className="text-white ml-2 mb-1">"status": "active",</div>
-            <div className="text-white ml-2 mb-1">"power": 50.5,</div>
-            <div className="text-white ml-2">"duration": 1847</div>
+            <div className="text-white ml-2 mb-1">&quot;sessionId&quot;: &quot;cs_123&quot;,</div>
+            <div className="text-white ml-2 mb-1">&quot;status&quot;: &quot;active&quot;,</div>
+            <div className="text-white ml-2 mb-1">&quot;power&quot;: 50.5,</div>
+            <div className="text-white ml-2">&quot;duration&quot;: 1847</div>
             <div className="text-gray-400">{"}"}</div>
           </motion.div>
         );

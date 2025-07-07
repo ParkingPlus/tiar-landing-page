@@ -13,9 +13,9 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
-import { menuItems } from '@/data/menuItem';
+import { MenuItem, menuItems } from '@/data/menuItem';
 import { PopupModal } from 'react-calendly';
-import Logo from '@/assets/Tiar/logo.svg';
+import logo from '@/assets/Tiar/logo.svg';
 import Image from 'next/image';
 
 // Enhanced navigation menu trigger with hover indicator
@@ -77,7 +77,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-6 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3 lg:flex-1">
-          <Image src={Logo} alt="logo" width={150} height={150} />
+          <Image src={logo} alt="logo" width={150} height={150} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -88,7 +88,6 @@ export function Navbar() {
                 <EnhancedNavigationMenuTrigger>About Us</EnhancedNavigationMenuTrigger>
                 <NavigationMenuContent>
                   <MegaMenu
-                    title="About Us"
                     items={menuItems.aboutUs}
                     showBrand={true}
                     columns={2}
@@ -100,7 +99,6 @@ export function Navbar() {
                 <EnhancedNavigationMenuTrigger>Use Cases</EnhancedNavigationMenuTrigger>
                 <NavigationMenuContent>
                   <MegaMenu
-                    title="Use Cases"
                     items={menuItems.useCase}
                     showBrand={false}
                     columns={3}
@@ -112,7 +110,6 @@ export function Navbar() {
                 <EnhancedNavigationMenuTrigger>Solutions</EnhancedNavigationMenuTrigger>
                 <NavigationMenuContent>
                   <MegaMenu
-                    title="Solutions"
                     items={menuItems.offerings}
                     showBrand={false}
                     columns={3}
@@ -124,7 +121,6 @@ export function Navbar() {
                 <EnhancedNavigationMenuTrigger>Resources</EnhancedNavigationMenuTrigger>
                 <NavigationMenuContent>
                   <MegaMenu
-                    title="Resources"
                     items={menuItems.resources}
                     showBrand={false}
                     columns={2}
@@ -150,7 +146,12 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
             <MobileMenu
-                menuItems={menuItems}
+                menuItems={menuItems as unknown as {
+                    aboutUs: MenuItem[];
+                    useCase: MenuItem[];
+                    offerings: MenuItem[];
+                    resources: MenuItem[];
+                }}
                 mobileMenuOpen={mobileMenuOpen}
                 setMobileMenuOpen={setMobileMenuOpen}
                 openMobileSection={openMobileSection}
