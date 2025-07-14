@@ -184,7 +184,7 @@ export function ContactForm() {
             {/* Phone Number */}
             <div className="space-y-2">
                 <Label htmlFor="phoneNumber">Phone Number*</Label>
-                <Input id="phoneNumber" type="tel" {...register("phoneNumber")} placeholder="+1 (555) 123-4567" />
+                <Input id="phoneNumber" type="tel" {...register("phoneNumber")} placeholder="+62 (555) 123-4567" />
                 {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
             </div>
         </div>

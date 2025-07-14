@@ -13,21 +13,21 @@ const contactMethods = [
     icon: <Mail className="w-6 h-6" />,
     title: "Email",
     description: "Send us an email",
-    contact: "noreply@tiar.ai",
-    href: "mailto:noreply@tiar.ai"
+    contact: "support@tiar.ai",
+    href: "mailto:support@tiar.ai"
   },
   {
     icon: <Phone className="w-6 h-6" />,
     title: "Phone",
     description: "Call us directly",
-    contact: "+1 (555) 123-4567",
-    href: "tel:+15551234567"
+    contact: "+628119009563",
+    href: "tel:+628119009563"
   },
   {
     icon: <MapPin className="w-6 h-6" />,
     title: "Office",
     description: "Visit our headquarters",
-    contact: "San Francisco, CA",
+    contact: "Jl. Benda, Jl. H. Sainin no. 39 Kemang, Jakarta Selatan",
     href: "#"
   },
   {

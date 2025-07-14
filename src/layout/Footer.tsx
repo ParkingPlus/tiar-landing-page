@@ -17,13 +17,13 @@ export function Footer() {
           </p>
           <div className="text-sm space-y-2 text-white/80">
             <p>
-              📍 Jl Benda, Jl. H. Sainin, Ps. Minggu, Kota Jakarta Selatan, 12560
+              📍 Jl. Benda, Jl. H. Sainin no. 39 Kemang, Jakarta Selatan 12560 Indonesia
             </p>
             <p>
-              📞 +62 812 3456 7890 (Indonesia)
+              📞 +628119009563 (Indonesia)
             </p>
             <p>
-              ✉️ contact@tiar.id
+              ✉️ support@tiar.id
             </p>
           </div>
         </div>
