@@ -51,9 +51,9 @@ const features = [
 ];
 
 const stats = [
-    { number: "500+", label: "Fleet Vehicles Powered", icon: <Car className="h-6 w-6" /> },
+    { number: "50+", label: "Fleet Vehicles Powered", icon: <Car className="h-6 w-6" /> },
     { number: "99.5%", label: "System Uptime", icon: <Shield className="h-6 w-6" /> },
-    { number: "40%", label: "Average Cost Savings", icon: <TrendingUp className="h-6 w-6" /> },
+    { number: "20%", label: "Average Cost Savings", icon: <TrendingUp className="h-6 w-6" /> },
     { number: "24/7", label: "Expert Support", icon: <Users className="h-6 w-6" /> }
 ];
 

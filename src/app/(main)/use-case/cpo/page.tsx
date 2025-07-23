@@ -52,7 +52,7 @@ const features = [
 ];
 
 const stats = [
-  { number: "1000+", label: "Public Charging Points Managed", icon: <Zap className="h-6 w-6" /> },
+  { number: "50+", label: "Public Charging Points Managed", icon: <Zap className="h-6 w-6" /> },
   { number: "98%", label: "Average Utilization Rate", icon: <Globe className="h-6 w-6" /> },
   { number: "30+", label: "Integrated Payment Channels", icon: <Wallet className="h-6 w-6" /> },
   { number: "24/7", label: "Uptime Monitoring & Support", icon: <Users className="h-6 w-6" /> },

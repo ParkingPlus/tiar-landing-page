@@ -3,11 +3,13 @@ import { Hero } from "@/components/common/Hero";
 import { SubSection } from "@/components/common/SubSection";
 import { CallToAction } from "@/components/common/CallToAction";
 import { Statistics } from "@/components/common/StatisticsBanner";
-import { Car, Shield, Globe, Users, MapPin, Zap, Clock } from "lucide-react";
+import { Car, Shield, Globe, Users, MapPin, Zap, Clock,
+         BarChart2, Wrench, DollarSign, Megaphone } from "lucide-react";
 import { UseCaseTabs } from "@/components/home/UseCaseTabs";
 import { PlatformPillars } from "@/components/home/PlatformPillars";
 import { HighlightCard } from "@/components/common/HighlightCard";
 import { LatestPostsCarousel } from "@/components/blog/LatestPostsCarousel";
+import { Gallery } from "@/components/solutions/dashboard/Gallery";
 
 // Import the new animation components
 import AnimateOnScroll from "@/components/animations/collection/AnimateOnScroll";
@@ -45,10 +47,10 @@ const features = [
 
 // Data for the statistics banner
 const stats = [
-    { number: "1M+", label: "Charging Sessions Managed", icon: <Car className="h-6 w-6" /> },
+    { number: "1000+", label: "Charging Sessions Managed", icon: <Car className="h-6 w-6" /> },
     { number: "99.8%", label: "Platform Uptime", icon: <Shield className="h-6 w-6" /> },
-    { number: "5+", label: "Countries in Operation", icon: <Globe className="h-6 w-6" /> },
-    { number: "100+", label: "Partners & Operators", icon: <Users className="h-6 w-6" /> }
+    { number: "2+", label: "Countries in Operation", icon: <Globe className="h-6 w-6" /> },
+    { number: "2+", label: "Partners & Operators", icon: <Users className="h-6 w-6" /> }
 ];
 
 const ctaButtons = [
@@ -56,6 +58,49 @@ const ctaButtons = [
       variant: "outline" as const,
       href: "/contact"
     }
+];
+
+const galleryViews = [
+  {
+      id: 'analytics',
+      name: 'Business Analytics',
+      icon: <BarChart2 className="h-5 w-5" />,
+      title: 'Data-Driven Decisions at a Glance',
+      description: 'Visualize your entire network\'s performance. Track revenue, utilization, and user growth with our intuitive and customizable analytics dashboard to uncover trends and opportunities.',
+      imageUrl: '/images/cms/business.png',
+  },
+  {
+      id: 'operations',
+      name: 'Operations & Uptime',
+      icon: <Wrench className="h-5 w-5" />,
+      title: 'Proactive Network Management',
+      description: 'Monitor the real-time health of every charger. Receive instant alerts, perform remote diagnostics, and manage firmware updates to ensure maximum uptime and reliability.',
+      imageUrl: '/images/cms/utilization.png',
+  },
+  {
+      id: 'finance',
+      name: 'Finance & Tariffs',
+      icon: <DollarSign className="h-5 w-5" />,
+      title: 'Automate Your Financial Workflow',
+      description: 'Set dynamic tariffs, manage multiple pricing models, and automate the generation of bills, revenue shares, and accounting reports. Reduce manual work and eliminate errors.',
+      imageUrl: '/images/cms/pricing.png',
+  },
+  {
+      id: 'marketing',
+      name: 'User Engagement',
+      icon: <Megaphone className="h-5 w-5" />,
+      title: 'Launch Targeted Marketing Campaigns',
+      description: 'Engage your users directly through the platform. Announce promotions, offer loyalty rewards, and send targeted blasts to drive usage and build a loyal customer base.',
+      imageUrl: 'https://placehold.co/1200x750/111827/ec4899?text=Marketing+View',
+  },
+  {
+      id: 'roaming',
+      name: 'Roaming & Partnerships',
+      icon: <Users className="h-5 w-5" />,
+      title: 'Expand Your Reach Seamlessly',
+      description: 'Manage your roaming agreements and partnerships. Our dashboard provides clear insights into inter-operator sessions, ensuring transparent billing and resource sharing.',
+      imageUrl: 'https://placehold.co/1200x750/111827/f59e0b?text=Roaming+View',
+  },
 ];
 
 export default function Home() {
@@ -119,6 +164,15 @@ export default function Home() {
 
       {/* Platform pillars sliding in from the right */}
       <PlatformPillars />
+
+      <StaggeredScroll stagger={0.15} delay={0.4}>
+        <Gallery
+            views={galleryViews}
+            eyebrow="Your Command Center"
+            title="One Dashboard to Rule Them All"
+            description="Our CMS is more than just a tool; it's the nerve center of your charging business. Explore the key modules that give you complete control."
+        />
+      </StaggeredScroll>      
 
       {/* Statistics with scale animation for impact */}
       <Statistics

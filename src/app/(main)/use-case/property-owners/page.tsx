@@ -36,10 +36,10 @@ const features = [
 ];
 
 const stats = [
-    { number: "25%", label: "Increase in Tenant Retention", icon: <Users className="h-6 w-6" /> },
+    { number: "20%", label: "Increase in Tenant Retention", icon: <Users className="h-6 w-6" /> },
     { number: "99.5%", label: "Guaranteed Uptime", icon: <Shield className="h-6 w-6" /> },
-    { number: "30%", label: "Higher Customer Dwell Time", icon: <TrendingUp className="h-6 w-6" /> },
-    { number: "100+", label: "Properties Powered", icon: <Building className="h-6 w-6" /> }
+    { number: "20%", label: "Higher Customer Dwell Time", icon: <TrendingUp className="h-6 w-6" /> },
+    { number: "30+", label: "Properties Powered", icon: <Building className="h-6 w-6" /> }
 ];
 
 const benefits = [
