@@ -23,7 +23,7 @@ export function Footer() {
               📞 +628119009563 (Indonesia)
             </p>
             <p>
-              ✉️ support@tiar.id
+              ✉️ support@tiar.ai
             </p>
           </div>
         </div>
