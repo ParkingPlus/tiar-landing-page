@@ -80,7 +80,7 @@ export function MobileMenu({
 }) {
   return (
     <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-      <SheetTrigger asChild className="md:hidden">
+      <SheetTrigger asChild className="lg:hidden">
         <Button variant="ghost" size="icon">
           <Menu className="h-6 w-6 text-gray-800" />
           <span className="sr-only">Toggle menu</span>
@@ -128,7 +128,7 @@ export function MobileMenu({
             <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>
               <Button
                 variant="outline"
-                className="w-full border-brand-500 text-brand-600 hover:bg-brand-50 rounded-xl"
+                className="w-full border-blue-500 text-blue-600 hover:bg-blue-50 rounded-xl"
               >
                 Pricing
               </Button>

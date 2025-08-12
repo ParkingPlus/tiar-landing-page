@@ -23,6 +23,7 @@ const features = [
         icon: <Presentation className="h-8 w-8 text-brand-500" />,
         title: "Interactive Sales Tool",
         description: "Use our chargers as a dynamic part of your sales pitch, demonstrating the ease and speed of EV ownership firsthand."
+        
     },
     {
         icon: <Zap className="h-8 w-8 text-yellow-500" />,
@@ -96,11 +97,13 @@ const testDriveFeatures = [
         name: 'The "First Charge" Moment',
         description: 'Allow customers to plug in the car themselves. This simple, interactive moment demystifies charging and creates a tangible sense of ownership and ease.',
         icon: BatteryCharging,
+        color: "bg-blue-500"
     },
     {
         name: 'Educate and Impress',
         description: 'Use the charging station as a hands-on educational tool. Your sales team can explain battery technology, range, and cost savings, positioning themselves as trusted experts.',
         icon: Sparkles,
+        color: "bg-gradient-to-r from-blue-500 to-purple-500"
     },
 ]
 
@@ -110,10 +113,22 @@ export default function ShowroomPage() {
     return (
         <main>
             <Hero
-                eyebrow="For Automotive Showrooms"
-                header="Charge Your Sales Floor"
-                caption="Integrate state-of-the-art EV charging to transform your showroom into an interactive experience. Educate customers, enhance test drives, and accelerate your transition to electric."
-                images={['https://images.unsplash.com/photo-1617886322207-6f504e7472c5?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                eyebrow={
+                    <>
+                        <span className="text-black">For Automotive Showrooms</span>
+                    </>
+                }
+                header={
+                    <>
+                        <span className="text-black">Charge Your Sales Floor</span>
+                    </>
+                }
+                caption={
+                    <>
+                        <span className="text-black">Integrate state-of-the-art EV charging to transform your showroom into an interactive experience. Educate customers, enhance test drives, and accelerate your transition to electric.</span>
+                    </>
+                }
+                images={['/images/usecase/usecase-showroom-hero.png']}
             />
 
             <ScaleInScroll delay={0.2} duration={0.8}>
@@ -122,7 +137,7 @@ export default function ShowroomPage() {
                     title="The Ultimate EV Sales & Service Toolkit"
                     subtitle="Our charging solutions are designed to seamlessly integrate into your dealership's daily operations, from the sales floor to the service bay."
                     features={features}
-                    backgroundColor="gray"
+                    backgroundColor="white"
                 />
             </ScaleInScroll>
 
@@ -140,7 +155,7 @@ export default function ShowroomPage() {
                     eyebrow="Post-Sale Engagement"
                     title="From Showroom Sale to Home Installation"
                     description="Extend the customer relationship beyond the dealership. Our platform makes it easy for you to sell and manage the installation of home charging units, creating a new, high-margin revenue stream and providing a complete EV solution for your buyers."
-                    imageUrl="https://images.unsplash.com/photo-1628642689621-e129113a3f3a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageUrl="/images/usecase/usecase-showroom.png"
                     imageAlt="EV charger being installed in a residential garage"
                     imagePosition="right"
                 />
@@ -159,7 +174,7 @@ export default function ShowroomPage() {
                     title="Why Smart Dealerships Choose Tiar"
                     subtitle="Discover the key advantages that make our charging solutions an essential investment for the modern dealership."
                     benefits={benefits}
-                    backgroundColor="gray"
+                    backgroundColor="white"
                 />
             </StaggeredScroll>
 
@@ -168,7 +183,6 @@ export default function ShowroomPage() {
                 subtitle="Let's discuss how our charging solutions can drive more sales and create happier customers. Contact us for a custom consultation."
                 buttons={ctaButton}
                 description="Custom showroom design • Sales training included • Priority support"
-                backgroundColor="green"
             />
 
             <LatestPostsCarousel

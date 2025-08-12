@@ -36,21 +36,21 @@
 
   --color-current: currentColor;
   --color-transparent: transparent;
-  --color-white: #ffffff;
+  --color-white: #fafbfa;
   --color-black: #101828;
 
-  --color-brand-25: #f2f7ff;
-  --color-brand-50: #F0F7F4;
-  --color-brand-100: #E4F0EB;
-  --color-brand-200: #BFDBCE;
-  --color-brand-300: #9DC7B0;
-  --color-brand-400: #649C76;
-  --color-brand-500: #356f42;
-  --color-brand-600: #2C6637;
-  --color-brand-700: #1E5428;
-  --color-brand-800: #13421B;
-  --color-brand-900: #0B3311;
-  --color-brand-950: #052108;
+  --color-brand-25: #5CF29D;
+  --color-brand-50: #56E192;
+  --color-brand-100: #4FD087;
+  --color-brand-200: #42AE71;
+  --color-brand-300: #3C9D66;
+  --color-brand-400: #3FA66C;
+  --color-brand-500: #358C5B;
+  --color-brand-600: #2F7B50;
+  --color-brand-700: #286A45;
+  --color-brand-800: #22593A;
+  --color-brand-900: #1B482F;
+  --color-brand-950: #153724;
 
   --color-blue-light-25: #f5fbff;
   --color-blue-light-50: #f0f9ff;
@@ -65,18 +65,19 @@
   --color-blue-light-900: #0b4a6f;
   --color-blue-light-950: #062c41;
 
-  --color-gray-25: #fcfcfd;
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f2f4f7;
-  --color-gray-200: #e4e7ec;
-  --color-gray-300: #d0d5dd;
-  --color-gray-400: #98a2b3;
-  --color-gray-500: #667085;
-  --color-gray-600: #475467;
-  --color-gray-700: #344054;
-  --color-gray-800: #1d2939;
-  --color-gray-900: #101828;
-  --color-gray-950: #0c111d;
+  --color-gray-25: #D3E1DF;
+  --color-gray-50: #B6C1C0;
+  --color-gray-100: #B4BFBE;
+  --color-gray-200: #A7B2B1;
+  --color-gray-300: #98A2A1;
+  --color-gray-400: #929C9B;
+  --color-gray-500: #899291;
+  --color-gray-600: #7B8282;
+  --color-gray-700: #6C7372;
+  --color-gray-800: #4E5353;
+  --color-gray-900: #404443;
+  --color-gray-950: #313434;
+
   --color-gray-dark: #1a2231;
 
   --color-orange-25: #fffaf5;
@@ -633,4 +634,14 @@
 
 .simplebar-scrollbar.simplebar-visible:before {
   @apply opacity-100;
+}
+
+/* Gallery tabs scrollbar hiding */
+.gallery-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-tabs-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

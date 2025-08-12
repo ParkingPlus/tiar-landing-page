@@ -56,31 +56,37 @@ const cpoBenefitsData = [
       name: 'Win More Deals',
       description: 'Set your proposal apart by offering a premium transparency feature that helps you win contracts with large, sophisticated property portfolios.',
       icon: Trophy,
+      color: "bg-yellow-500"
   },
   {
       name: 'Reduce Support Load',
       description: 'Empower partners to self-serve for basic data inquiries, freeing up your support team to focus on critical operational issues.',
       icon: PhoneOff,
+      color: "bg-blue-500"
   },
   {
       name: 'Build Partner Loyalty',
       description: 'Increase transparency and trust, leading to stronger, longer-lasting relationships with your property partners.',
       icon: HeartHandshake,
+      color: "bg-green-500"
   },
   {
       name: 'Streamline Reporting',
       description: 'Simplify revenue share discussions and reporting with a shared, single source of truth that both parties can access 24/7.',
       icon: FileText,
+      color: "bg-red-500"
   },
   {
       name: 'Enhance Data Security',
       description: 'Provide necessary data without exposing your core operational controls, ensuring your main network remains secure and private.',
       icon: Lock,
+      color: "bg-purple-500"
   },
   {
       name: 'Improve Scalability',
       description: 'Easily manage permissions and data access for hundreds or thousands of partners as your charging network grows.',
       icon: Scaling,
+      color: "bg-orange-500"
   },
 ];
 
@@ -93,10 +99,22 @@ export default function SubAccountPage() {
         <main>
             <FadeInScroll>
                 <Hero
-                    eyebrow="TIAR Sub-Account Solution"
-                    header="Empower Your Partners, Build Stronger Networks"
-                    caption="Introducing Sub-Accounts: a dedicated dashboard for your property partners. Offer unparalleled transparency, build trust, and create a powerful selling point that sets you apart."
-                    images={['https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                    eyebrow={
+                        <>
+                            <span className="text-black">TIAR Sub-Account Solution</span>
+                        </>
+                    }
+                    header={
+                        <>
+                            <span className="text-black">Empower Your Partners, Build Stronger Networks</span>
+                    </>
+                    }
+                    caption={
+                        <>
+                            <span className="text-black">Introducing Sub-Accounts: a dedicated dashboard for your property partners. Offer unparalleled transparency, build trust, and create a powerful selling point that sets you apart.</span>
+                        </>
+                    }
+                    images={['/images/solutions/solution-subaccount-hero.png']}
                 />
             </FadeInScroll>
 
@@ -133,10 +151,23 @@ export default function SubAccountPage() {
                  <SubSection
                     eyebrow="EFFORTLESS SETUP"
                     title="Three Steps to Empowered Partners"
-                    description="Onboarding a partner to their Sub-Account is designed to be incredibly simple and takes less than a minute.
-                    \n\n1. **Invite Partner:** Enter your partner's email directly from your CPO dashboard.
-                    \n2. **Assign Properties:** Select which charging stations or properties they should have access to.
-                    \n3. **They Get Access:** Your partner receives an invitation to create their password and can instantly log in to their new dashboard."
+                    description={
+                      'Onboarding a partner to their Sub-Account dirancang sangat sederhana dan kurang dari satu menit.'
+                    }
+                    steps={[
+                      {
+                        title: 'Invite Partner',
+                        description: "Masukkan email partner langsung dari dashboard CPO Anda."
+                      },
+                      {
+                        title: 'Assign Properties',
+                        description: "Pilih charging station atau properti mana yang boleh mereka akses."
+                      },
+                      {
+                        title: 'They Get Access',
+                        description: "Partner akan menerima undangan untuk membuat password dan langsung bisa login ke dashboard mereka."
+                      }
+                    ]}
                     imageUrl="https://images.unsplash.com/photo-1611266619553-68f43c3a4362?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     imageAlt="A simple, clean interface showing a user invitation process."
                     imagePosition="left"

@@ -69,16 +69,19 @@ const steps = [
         name: 'Step 1: Brand & Customize',
         description: 'Provide your logo, color palette, and brand guidelines. Our team works with you to craft a beautiful interface that is uniquely yours.',
         icon: Palette,
+        color: "bg-red-500"
     },
     {
         name: 'Step 2: Configure & Integrate',
         description: 'Choose your payment channels, configure your currency, and set up your customer support integrations, like WhatsApp, for any market.',
         icon: Settings,
+        color: "bg-amber-500"
     },
     {
         name: 'Step 3: Instant Web & App Store Launch',
         description: 'Go live instantly with a web-based version on your custom domain while we handle the Apple App Store and Google Play submission process in parallel. No more waiting.',
         icon: UploadCloud,
+        color: "bg-blue-500"
     },
 ]
 
@@ -86,10 +89,22 @@ export default function WhiteLabelPage() {
     return (
         <main>
             <Hero
-                eyebrow="TIAR White Label Solution"
-                header="Your Brand, Your App, Our Power"
-                caption="Step into the future with a custom-branded EV charging app for iOS, Android, and the web. We provide a beautifully designed, feature-rich platform that puts your brand front and center."
-                images={['https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                eyebrow={
+                    <>
+                        <span className="text-black">TIAR White Label Solution</span>
+                    </>
+                }
+                header={
+                    <>
+                        <span className="text-black">Your Brand, Your App, Our Power</span>
+                    </>
+                }
+                caption={
+                    <>
+                        <span className="text-black">Step into the future with a custom-branded EV charging app for iOS, Android, and the web. We provide a beautifully designed, feature-rich platform that puts your brand front and center.</span>
+                    </>
+                }
+                images={['/images/solutions/solution-whitelabel-hero.png']}
             />
             
             <FadeInScroll delay={0.2} duration={0.8}>
@@ -106,7 +121,7 @@ export default function WhiteLabelPage() {
                   eyebrow="INSTANT DEPLOYMENT"
                   title="Bypass the App Store. Go Live Today."
                   description="Why wait months for app store approvals? With our platform, you can launch a powerful, full-featured web-based application on your own custom domain (e.g., charge.yourbrand.com) immediately. This allows you to start onboarding users and generating revenue from day one, while the native app versions are being processed."
-                  imageUrl="https://images.unsplash.com/photo-1585250003309-694ff34512d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  imageUrl="/images/solutions/application_store.png"
                   imageAlt="A phone and laptop side-by-side showing the same branded web application, signifying instant cross-platform deployment."
                   imagePosition="right"
                 />

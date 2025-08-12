@@ -33,7 +33,7 @@ export function BenefitsGrid({ benefits }: BenefitsGridProps) {
                         {benefits.map((benefit) => (
                             <div key={benefit.title} className="flex flex-col">
                                 <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
-                                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-gray-100">
+                                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-gray-50/20">
                                         {benefit.icon}
                                     </div>
                                     {benefit.title}

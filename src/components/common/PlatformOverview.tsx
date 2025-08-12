@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Server, 
@@ -17,6 +17,11 @@ import {
 
 export const PlatformOverview = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const platformSections = [
     {
@@ -24,8 +29,8 @@ export const PlatformOverview = () => {
       title: 'Backend Platform',
       description: 'Comprehensive off-the-shelf backend solution with full industry protocol implementations, providing complete control over your EV charging business operations through a single interface.',
       icon: <Server className="w-8 h-8" />,
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      color: 'from-red-500 to-red-600',
+      bgColor: 'bg-red-50/20',
       features: ['Real-time monitoring', 'Protocol compliance', 'Business intelligence', 'Fleet management'],
       mockupType: 'dashboard'
     },
@@ -34,8 +39,8 @@ export const PlatformOverview = () => {
       title: 'Developer API',
       description: 'Secure API to access all platform functionalities, create tailored EV charging experiences, and integrate seamlessly with other systems.',
       icon: <Code className="w-8 h-8" />,
-      color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      color: 'from-yellow-500 to-yellow-600',
+      bgColor: 'bg-yellow-50/30',
       features: ['RESTful API', 'WebSocket support', 'Comprehensive docs', 'SDK libraries'],
       mockupType: 'code'
     },
@@ -44,8 +49,8 @@ export const PlatformOverview = () => {
       title: 'Web Portal',
       description: 'User-friendly web portal for customers to manage accounts, locate stations, and make ad-hoc payments.',
       icon: <Globe className="w-8 h-8" />,
-      color: 'from-teal-500 to-teal-600',
-      bgColor: 'bg-teal-50',
+      color: 'from-blue-500 to-blue-600',
+      bgColor: 'bg-blue-50/30',
       features: ['Account management', 'Station locator', 'Payment processing', 'Usage analytics', 'Custom branding'],
       mockupType: 'web'
     },
@@ -54,8 +59,8 @@ export const PlatformOverview = () => {
       title: 'Mobile Apps',
       description: 'Customizable white-label iOS and Android apps for quick market entry. Seamlessly integrate with existing apps, extend our solutions with custom functionality, or develop your own mobile applications.',
       icon: <Smartphone className="w-8 h-8" />,
-      color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50',
+      color: 'from-purple-500 to-purple-600',
+      bgColor: 'bg-purple-50/10',
       features: ['White-label solution', 'Cross-platform', 'Custom branding', 'Native performance', 'Custom branding'],
       mockupType: 'mobile'
     },
@@ -64,8 +69,8 @@ export const PlatformOverview = () => {
       title: 'Dashboard',
       description: 'Extensive pre-built dashboard for your business operations. ',
       icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      color: 'from-brand-500 to-brand-600',
+      bgColor: 'bg-brand-50/10',
       features: ['Real-time monitoring', 'Protocol compliance', 'Business intelligence', 'Fleet management'],
       mockupType: 'dashboard'
     }
@@ -251,8 +256,12 @@ export const PlatformOverview = () => {
     }
   };
 
+  if (!hasMounted) {
+    return <div className="min-h-screen bg-white p-8" suppressHydrationWarning />;
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-8">
+    <div className="min-h-screen bg-white p-8" suppressHydrationWarning>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

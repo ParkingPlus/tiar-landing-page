@@ -62,7 +62,7 @@ const benefits = [
   {
     title: "Maximize Charger Utilization",
     description: "Dynamic pricing, location visibility, and user-friendly maps help keep your chargers constantly in use.",
-    image: "https://images.unsplash.com/photo-1610985725707-bb0766bf123b?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/benefit/tiar_dashboard.png",
     imageAlt: "Electric vehicle charger on busy street"
   },
   {
@@ -74,19 +74,19 @@ const benefits = [
   {
     title: "Enhance User Experience",
     description: "Provide drivers with real-time availability, intuitive UI, and easy payment via web or app.",
-    image: "https://images.unsplash.com/photo-1600267165477-a1477b7deedc?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/benefit/tiar_app.png",
     imageAlt: "Mobile app interface for EV charging"
   },
   {
     title: "Developer-Friendly API",
     description: "Enable custom logic, mobile integrations, and enterprise apps through our modern REST API.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/benefit/tiar_api.png",
     imageAlt: "Code on a developer workstation"
   },
   {
     title: "Launch Your Brand, Fast",
     description: "Go live within days with our white-labeled solution and pre-built templates.",
-    image: "https://images.unsplash.com/photo-1653647054667-c99dc7f914ef?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/benefit/tiar_whitelabel.png",
     imageAlt: "Branded website showcase"
   },
 ];
@@ -97,10 +97,22 @@ export default function CPOPage() {
   return (
     <main>
       <Hero
-        eyebrow="Charging Point Operator Platform"
-        header="All-in-One Infrastructure for CPOs"
-        caption="Tiar helps Charging Point Operators launch, scale, and manage EV charging infrastructure with advanced features, flexible APIs, and branding capabilities."
-        images={["https://images.unsplash.com/photo-1631347826177-de288776ed3b?q=80&w=1170?q=80&w=2070&auto=format&fit=crop"]}
+        eyebrow={
+          <>
+            <span className="text-black">Charging Point Operator Platform</span>
+          </>
+        }
+        header={
+          <>
+            <span className="text-black"> All-in-One Infrastructure for CPOs</span>
+          </>
+        }
+        caption={
+          <>
+            <span className="text-black">Tiar helps Charging Point Operators launch, scale, and manage EV charging infrastructure with advanced features, flexible APIs, and branding capabilities.</span>
+          </>
+        }
+        images={["/images/usecase/usecase-cpo-hero.png"]}
       />
 
       <StaggeredScroll stagger={0.15} delay={0.4}>
@@ -126,7 +138,7 @@ export default function CPOPage() {
           title="Why CPOs Choose Tiar"
           subtitle="Explore how our platform empowers operators to boost utilization, simplify operations, and scale rapidly."
           benefits={benefits}
-          backgroundColor="green"
+          backgroundColor="white"
         />
       </StaggeredScroll>
 
@@ -135,14 +147,14 @@ export default function CPOPage() {
           eyebrow="Total Operational Control"
           title="Your Infrastructure, Your Brand"
           description="Tiar enables you to offer charging services under your own name, powered by our backend. Customize your web interface, track analytics, monitor uptime, and expand across cities—all in one platform."
-          imageUrl="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop"
+          imageUrl="/images/usecase/usecase-cpo.png"
           imageAlt="Branded dashboard interface"
           imagePosition="right"
         />
       </SlideInScroll>
 
       <ScaleInScroll delay={0.2} duration={0.8}>  
-        <PlatformShowcase />
+        <PlatformShowcase />  
       </ScaleInScroll>
 
       <CallToAction
@@ -150,7 +162,6 @@ export default function CPOPage() {
         subtitle="Get started with our white-label-ready CPO platform."
         buttons={ctaButton}
         description="Fast onboarding • API-first design • Custom branding available"
-        backgroundColor="green"
       />
 
       <LatestPostsCarousel

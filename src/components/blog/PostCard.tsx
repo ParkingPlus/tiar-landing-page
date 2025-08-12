@@ -11,7 +11,7 @@ interface PostCardProps {
 export default function PostCard({ post }: PostCardProps) {
   return (
     <Link href={`/blog/${post.slug.current}`} className="group block transform transition-transform hover:scale-[1.015]">
-      <div className="overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 bg-white">
+      <div className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 bg-white">
         <div className="relative w-full max-h-[220px] aspect-[3/2] overflow-hidden">
           {post.mainImage ? (
             <>
@@ -22,7 +22,7 @@ export default function PostCard({ post }: PostCardProps) {
                 height={533}
                 className="absolute top-0 left-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-400/50 via-black/20 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-black/20 to-transparent z-10" />
             </>
           ) : post.imageURL ? (
             <>
@@ -33,7 +33,7 @@ export default function PostCard({ post }: PostCardProps) {
                 height={533}
                 className="absolute top-0 left-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-400/50 via-black/20 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-black/20 to-transparent z-10" />
             </>
           ) : (
             <div className="absolute inset-0 bg-gray-200" />
@@ -45,7 +45,7 @@ export default function PostCard({ post }: PostCardProps) {
             {post.categories?.map((category) => (
               <span
                 key={category._id}
-                className="text-xs font-medium bg-brand-100 text-brand-700 px-2 py-1 rounded-full"
+                className="text-xs font-medium bg-brand-500 text-white px-2 py-1 rounded-full"
               >
                 {category.title}
               </span>

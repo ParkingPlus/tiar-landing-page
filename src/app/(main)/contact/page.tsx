@@ -48,9 +48,9 @@ const benefits = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-brand-50">
+    <div className="min-h-screen bg-gradient-to-br from-white via-white to-brand-50">
       {/* Hero Section */}
-      <div className="relative pt-32 pb-20 px-4 lg:px-0">
+      <div className="relative pt-32 pb-20 px-4 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-600/5 to-brand-400/5" />
         
         <div className="relative max-w-7xl mx-auto">

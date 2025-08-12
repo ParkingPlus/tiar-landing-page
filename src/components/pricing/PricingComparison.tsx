@@ -99,7 +99,7 @@ export default function TiarPricingComponent() {
       : pricingFeatures.filter((f) => f.category === selectedCategory);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="max-w-3xl mx-auto text-center mb-16">
         <div className="inline-flex items-center gap-2 mb-4">
@@ -177,7 +177,7 @@ export default function TiarPricingComponent() {
                 className={`w-full py-3 font-medium transition ${
                   plan.buttonVariant === 'default'
                     ? 'bg-gradient-to-r from-green-400 to-teal-500 text-white hover:from-green-500 hover:to-teal-600'
-                    : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-100'
+                    : 'border-2 border-gray-300 text-gray-700 hover:bg-gray-100/20'
                 } rounded-lg shadow-sm`}
                 variant={plan.buttonVariant}
               >
@@ -209,7 +209,7 @@ export default function TiarPricingComponent() {
                 className={`text-xs rounded-full px-3 py-1 ${
                   selectedCategory === cat
                     ? 'bg-teal-50 text-teal-600'
-                    : 'border border-gray-200 text-gray-600 hover:bg-gray-100'
+                    : 'border border-gray-200 text-gray-600 hover:bg-gray-25'
                 }`}
                 onClick={() => setSelectedCategory(cat)}
               >
@@ -219,7 +219,7 @@ export default function TiarPricingComponent() {
           </div>
         </CardHeader>
 
-        <CardContent className="p-0 bg-gray-50">
+        <CardContent className="p-0 bg-gray-50/10">
           <div className="overflow-x-auto">
             <table className="w-full border-separate border-spacing-0">
               <thead>
@@ -243,7 +243,7 @@ export default function TiarPricingComponent() {
                     key={f.name}
                     className={idx % 2 === 0 ? '' : 'bg-white'}
                   >
-                    <td className="sticky left-0 z-0 bg-gray-50 p-4 text-sm">
+                    <td className="sticky left-0 z-0 bg-gray-50/10 p-4 text-sm">
                       <div className="font-medium text-gray-800">{f.name}</div>
                       <div className="text-xs text-gray-500">
                         {f.category}

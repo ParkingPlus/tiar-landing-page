@@ -87,16 +87,28 @@ export default function EScooterPage() {
     return (
         <main>
             <Hero
-                eyebrow="COMING SOON"
-                header="Powering the Micromobility Revolution"
-                caption="The eScooter boom is here. Get ready to deploy specialized, reliable, and user-friendly charging points designed for the next wave of urban transport."
+                eyebrow={
+                    <>
+                        <span className="text-black">COMING SOON</span>
+                    </>
+                }
+                header={
+                    <>
+                        <span className="text-black">Powering the Micromobility Revolution</span>
+                    </>
+                }
+                caption={
+                    <>
+                        <span className="text-black">The eScooter boom is here. Get ready to deploy specialized, reliable, and user-friendly charging points designed for the next wave of urban transport.</span>
+                    </>
+                }
                 images={['/images/usecase/usecase-escooter.jpg']}
             />
             <SubSection
                 eyebrow="A Multi-Billion Dollar Opportunity"
                 title="The eScooter Market is Exploding"
                 description="With massive growth in countries like Indonesia, India, China, and the Philippines, the demand for reliable charging infrastructure has never been higher. This is your chance to get in on the ground floor of a market set to reach over 200 million vehicles in Asia alone."
-                imageUrl="https://images.unsplash.com/photo-1616000499092-3576a5991417?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                imageUrl="/images/about/global.png"
                 imageAlt="Map of Southeast Asia with glowing points"
                 imagePosition="left"
             />
@@ -121,7 +133,7 @@ export default function EScooterPage() {
                 title="Unlock the Full Potential of Micromobility"
                 subtitle="Discover the advantages of deploying a dedicated charging network for eScooters."
                 benefits={benefits}
-                backgroundColor="gray"
+                backgroundColor="white"
             />
 
             <CallToAction
@@ -129,7 +141,6 @@ export default function EScooterPage() {
                 subtitle="Our eScooter solution is launching soon. Join our waitlist for exclusive updates or apply to become a launch partner and help shape the future of urban mobility."
                 buttons={ctaButton}
                 description="Early access • Launch partner discounts • Priority support"
-                backgroundColor="green"
             />
 
             <LatestPostsCarousel

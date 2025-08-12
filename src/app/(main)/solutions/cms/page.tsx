@@ -20,31 +20,37 @@ const featuresData = [
         name: "Dynamic Tariff Engine",
         description: "Implement sophisticated pricing models based on time, demand, or user groups to maximize revenue and charger utilization.",
         icon: Coins,
+        color: "bg-yellow-500"
     },
     {
         name: "Automated Financial Reporting",
         description: "Automatically generate energy bills, revenue share calculations, and profit reports, eliminating manual work and ensuring accuracy.",
         icon: FileText,
+        color: "bg-blue-500"
     },
     {
         name: "Intuitive Business Intelligence",
         description: "Our clean GUI makes complex data easy to understand, empowering you to make smarter, faster business decisions.",
         icon: BarChartBig,
+        color: "bg-green-500"
     },
     {
         name: "Remote Diagnostics & Control",
         description: "Proactively manage your network's health. Reboot chargers, update firmware, and diagnose issues from anywhere, anytime.",
         icon: Cpu,
+        color: "bg-red-500"
     },
     {
         name: "Targeted Marketing Tools",
         description: "Launch promotions, loyalty programs, and announcements directly to your users to drive engagement and increase usage.",
         icon: Megaphone,
+        color: "bg-purple-500"
     },
     {
         name: "Open Roaming Integration",
         description: "Seamlessly connect with other networks through standards like OCPI to expand your reach and offer a better experience for all EV drivers.",
         icon: Globe,
+        color: "bg-gray-500"
     },
 ];
 
@@ -83,7 +89,7 @@ const galleryViews = [
       icon: <Megaphone className="h-5 w-5" />,
       title: 'Launch Targeted Marketing Campaigns',
       description: 'Engage your users directly through the platform. Announce promotions, offer loyalty rewards, and send targeted blasts to drive usage and build a loyal customer base.',
-      imageUrl: 'https://placehold.co/1200x750/111827/ec4899?text=Marketing+View',
+      imageUrl: '/images/cms/user-engagement.png',
   },
   {
       id: 'roaming',
@@ -102,7 +108,7 @@ export default function CMSPage() {
                 eyebrow="TIAR Solution"
                 header="Your Network's Command Center"
                 caption="The TIAR Charging Management System (CMS) is a powerful, all-in-one platform that gives you complete visibility and control over your entire charging infrastructure. From operations and finance to marketing and growth, it's all here."
-                images={['https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                images={['/images/solutions/solution-cms-hero.png']}
             />
 
             <StaggeredScroll stagger={0.15} delay={0.4}>

@@ -33,17 +33,19 @@ export async function sanityFetch<QueryResponse>({
     );
   }
   const isDevelopment = process.env.NODE_ENV === "development";
+  const shouldISR = !isDevelopment && !isDraftMode;
 
   return client
     .withConfig({ useCdn: !isDraftMode }) // Use CDN only when not in draft mode
     .fetch<QueryResponse>(query, params, {
-      cache: isDevelopment || isDraftMode ? undefined : "force-cache",
       ...(isDraftMode && {
         token: token,
         perspective: "previewDrafts",
       }),
+      // Use ISR in production (non-draft), disable explicit force-cache to allow revalidation
       next: {
-        ...(isDraftMode && { revalidate: 30 }),
+        ...(shouldISR ? { revalidate: 60 } : {}),
+        ...(isDraftMode ? { revalidate: 5 } : {}),
         tags,
       },
     });

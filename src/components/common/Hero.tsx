@@ -14,9 +14,9 @@ import { cn } from '@/lib/utils'; // Assuming shadcn utils path
  * @property {React.ReactNode} [actions] - Optional actions to be rendered below the caption.
  */
 interface HeroProps {
-  eyebrow?: string;
+  eyebrow?: React.ReactNode;
   header: React.ReactNode;
-  caption: string;
+  caption: React.ReactNode;
   images: string[];
   className?: string;
   actions?: React.ReactNode;
@@ -46,16 +46,32 @@ export function Hero({ eyebrow, header, caption, images, className, actions }: H
   }, [images.length]);
 
   const hasImages = images && images.length > 0;
+  const currentImageUrl = hasImages ? images[currentIndex] : "";
 
   return (
-    <section className={cn("relative w-full h-[80vh] md:h-screen text-white overflow-hidden bg-gray-500", className)}>
+    <section
+      id="hero-root"
+      data-current-bg={currentImageUrl}
+      className={cn(
+        "relative w-full h-[80vh] md:h-screen text-white overflow-hidden bg-gray-500",
+        className
+      )}
+    >
       {/* Background Image Carousel */}
       {hasImages && (
         <AnimatePresence initial={false}>
           <motion.div
             key={currentIndex}
+            data-hero-background
             className="absolute inset-0 w-full h-full bg-gray-900 bg-center"
-            style={{ backgroundImage: `url(${images[currentIndex]})` }}
+            style={{ 
+              backgroundImage: `url(${currentImageUrl})`,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              // blur the image
+              filter: 'blur(0.5px)'
+            }}
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
@@ -65,23 +81,23 @@ export function Hero({ eyebrow, header, caption, images, className, actions }: H
       )}
 
       {/* Dark Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-100/80 to-black/60 to-30%" /> 
+      <div className="absolute inset-0 bg-gradient-to-b to-white/50" /> 
 
       {/* Content */}
-      <div className="relative h-full max-w-7xl mx-auto px-6 md:px-8 flex flex-col justify-center">
+      <div className="relative h-full max-w-7xl mx-auto px-10 md:px-12 flex flex-col justify-center">
         <motion.div
           className="max-w-2xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
         >
-          <span className="text-base font-semibold uppercase tracking-wider text-gray-300">
+          <span className="text-base font-semibold uppercase tracking-wider text-gray-900">
             {eyebrow}
           </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-2 mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-6 leading-tight text-gray-900">
             {header}
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-prose">
+          <p className="text-lg md:text-xl text-gray-950 mb-8 max-w-prose">
             {caption}
           </p>
           {actions && <div className="flex flex-wrap gap-4">{actions}</div>}

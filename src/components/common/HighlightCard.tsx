@@ -20,6 +20,7 @@ interface HighlightCardProps {
   href?: string;
   textColor?: string;
   iconColor?: string;
+  iconStyle?: React.CSSProperties;
   className?: string;
 }
 
@@ -35,19 +36,20 @@ export function HighlightCard({
   header,
   text,
   href,
-  textColor = 'text-gray-300',
+  textColor = 'text-gray-700',
   iconColor = 'text-yellow-400',
+  iconStyle,
   className,
 }: HighlightCardProps) {
   
   // The core content of the card
   const CardContent = (
-    <div className="text-center">
-      <div className={cn("mb-4 h-12 w-12 mx-auto", iconColor)}>
+    <div className="text-center px-4">
+      <div className={cn("mb-4 h-12 w-12 mx-auto", iconColor)} style={iconStyle}>
         {icon}
       </div>
       {header && (
-        <h3 className="text-2xl font-bold text-white mb-2">{header}</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{header}</h3>
       )}
       <p className={cn("leading-relaxed", textColor)}>{text}</p>
     </div>

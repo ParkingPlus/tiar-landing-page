@@ -135,7 +135,7 @@ export default function BlogPost({ post }: BlogPostProps) {
   return (
     <article className="min-h-screen lg:px-12 bg-white">
       {/* Header Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
+      <div className="">
         <div className="container mx-auto px-4 py-8 lg:px-8">
           {/* Back Button */}
           <Link 

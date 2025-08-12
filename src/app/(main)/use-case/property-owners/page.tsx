@@ -81,10 +81,22 @@ export default function PropertyOwnersPage() {
     return (
         <main>
             <Hero
-                eyebrow="For Property Owners"
-                header="Unlock New Revenue with EV Charging"
-                caption="Attract and retain tenants, customers, and visitors by providing a valuable amenity. We make it easy to install, manage, and monetize EV charging stations on your property."
-                images={['https://images.unsplash.com/photo-1617886322168-72b886573c35?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                eyebrow={
+                    <>
+                        <span className="text-black">For Property Owners</span>
+                    </>
+                }
+                header={
+                    <>
+                        <span className="text-black">Unlock New Revenue with EV Charging</span>
+                    </>
+                }
+                caption={
+                    <>
+                        <span className="text-black">Attract and retain tenants, customers, and visitors by providing a valuable amenity. We make it easy to install, manage, and monetize EV charging stations on your property.</span>
+                    </>
+                }
+                images={['/images/usecase/usecase-property-hero.png']}
             />
 
             <FadeInScroll delay={0.2} duration={0.8}>
@@ -136,7 +148,6 @@ export default function PropertyOwnersPage() {
                     title="Why Property Owners Choose Tiar"
                     subtitle="Discover the key advantages that make our charging solutions the ideal investment for your property portfolio."
                     benefits={benefits}
-                        backgroundColor="gray"
                 />
             </StaggeredScroll>
 
@@ -145,7 +156,7 @@ export default function PropertyOwnersPage() {
                     eyebrow="Smart Load Management"
                     title="Maximize Efficiency, Minimize Cost"
                     description="Our intelligent system dynamically balances power across all active chargers. This prevents overloading your electrical infrastructure and minimizes costly upgrades, ensuring efficient energy use."
-                    imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageUrl="/images/usecase/usecase-property.png"
                     imageAlt="Smart grid visualization"
                     imagePosition="left"
                 />
@@ -156,7 +167,6 @@ export default function PropertyOwnersPage() {
                 subtitle="Let's discuss how EV charging can boost your property's value and open up new revenue streams."
                 buttons={ctaButton}
                 description="Free site assessment • Custom quotes • 24/7 support"
-                backgroundColor="green"
             />
 
             <LatestPostsCarousel

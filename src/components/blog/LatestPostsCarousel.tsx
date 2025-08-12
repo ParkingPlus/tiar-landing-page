@@ -23,13 +23,14 @@ export async function LatestPostsCarousel({ category, title, subtitle }: LatestP
     }
 
     const posts = await sanityFetch<Post[]>({
-        query: query,
+        query,
         params: { category },
+        tags: category ? ["post", `category:${category}`] : ["post"],
     });
 
     return (
         <section className="py-12 sm:py-16 lg:py-20">
-            <div className="mx-auto max-w-7xl overflow-x-hidden px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl overflow-x-hidden px-4 sm:px-6 lg:px-20">
                 {/* Always render title and subtitle */}
                 {(title || subtitle) && (
                     <div className="text-center mb-8">
@@ -50,7 +51,7 @@ export async function LatestPostsCarousel({ category, title, subtitle }: LatestP
                         <CarouselContent>
                             {posts.map((post) => (
                                 <CarouselItem key={post._id} className="basis-full md:basis-1/2 lg:basis-1/3">
-                                    <div className="p-1">
+                                    <div className="px-2 py-4">
                                         <PostCard post={post} />
                                     </div>
                                 </CarouselItem>

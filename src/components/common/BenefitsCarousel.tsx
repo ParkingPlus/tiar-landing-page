@@ -36,12 +36,12 @@ export function BenefitsCarousel({
   title,
   subtitle,
   benefits,
-  backgroundColor = "gray",
+  backgroundColor = "white",
   className = "",
 }: BenefitsCarouselProps) {
   return (
     <section className={`py-16 ${backgroundColors[backgroundColor]} ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
         <div className="text-center mb-12">
           {eyebrow && (
             <Badge variant="outline" className="mb-4">
@@ -62,25 +62,31 @@ export function BenefitsCarousel({
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-2 md:-ml-4 py-4">
               {benefits.map((benefit, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                    <div className="relative h-48 md:h-56">
-                      <Image
-                        src={benefit.image}
-                        alt={benefit.imageAlt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                    </div>
-                    <div className="p-6">
+                <CarouselItem
+                  key={index}
+                  className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
+                >
+                  <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+                    {/* Background image */}
+                    <Image
+                      src={benefit.image}
+                      alt={benefit.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+
+                    {/* Gradient overlay from transparent to white (top -> bottom) */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/70 to-white" />
+
+                    {/* Text content pinned to bottom-left */}
+                    <div className="absolute inset-x-0 bottom-0 p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">
                         {benefit.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed">
                         {benefit.description}
                       </p>
                     </div>

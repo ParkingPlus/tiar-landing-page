@@ -14,11 +14,11 @@ export const menuItems: MenuItems = {
     { href: "/about/benefits", title: "Key Benefits", description: "See how TIAR can help your organization.", imageUrl: "/images/about/key.jpg", imageAlt: "Key benefits of TIAR" },
   ],
   useCase: [
-    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "/images/usecase/usecase-cpo.jpg", imageAlt: "Bus operator monitoring a dashboard" },
-    { href: "/use-case/escooter", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "/images/usecase/usecase-escooter.jpg", imageAlt: "E-scooter charging station" },
-    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "/images/usecase/usecase-fleet.jpg", imageAlt: "EV charging stations for fleets" },
-    { href: "/use-case/showroom", title: "Showroom", description: "Chargestations for your showroom.", imageUrl: "/images/usecase/usecase-showroom.jpg", imageAlt: "Showroom with charging stations" },
-    { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "/images/usecase/usecase-property.jpg", imageAlt: "Property owners offering charging stations" },
+    { href: "/use-case/cpo", title: "Charging Operators", description: "Optimize your fleet and operations with our tools.", imageUrl: "/images/usecase/usecase-cpo.png", imageAlt: "Bus operator monitoring a dashboard" },
+    { href: "/use-case/escooter", title: "E-Scooters", description: "Upcoming support for e-scooters.", imageUrl: "/images/usecase/usecase-escooter.png", imageAlt: "E-scooter charging station" },
+    { href: "/use-case/fleet", title: "Fleet", description: "Manage your EV fleet with our tools.", imageUrl: "/images/usecase/usecase-fleet.png", imageAlt: "EV charging stations for fleets" },
+    { href: "/use-case/showroom", title: "Showroom", description: "Chargestations for your showroom.", imageUrl: "/images/usecase/usecase-showroom.png", imageAlt: "Showroom with charging stations" },
+    { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "/images/usecase/usecase-property.png", imageAlt: "Property owners offering charging stations" },
   ],
   offerings: [
     { href: "/solutions/white-label", title: "White Label", description: "Customize your solution to fit your brand.", imageUrl: "/images/solutions/solution-whitelabel.png", imageAlt: "Diagram showing white label app" },

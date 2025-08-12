@@ -55,7 +55,7 @@ export default function AnimationWrapper({
 
   return (
     <motion.div
-      className={className}
+      className={`overflow-hidden ${className}`}
       variants={animations[animation]}
       initial="initial"
       whileInView="animate"
@@ -65,6 +65,10 @@ export default function AnimationWrapper({
         ease: [0.25, 0.1, 0.25, 1.0]
       }}
       viewport={{ once: true, amount: 0.2 }}
+      style={{ 
+        transformOrigin: 'center center',
+        willChange: 'transform, opacity'
+      }}
     >
       {children}
     </motion.div>

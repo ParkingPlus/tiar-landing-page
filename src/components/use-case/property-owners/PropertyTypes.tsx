@@ -25,7 +25,7 @@ const propertyTypes = [
 
 export default function PropertyTypes() {
     return (
-        <section className="py-16 bg-gray-50 sm:py-24">
+        <section className="py-16 bg-white sm:py-24">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center">
                     <h2 className="text-base font-semibold leading-7 text-brand-600">Solutions for Every Property</h2>

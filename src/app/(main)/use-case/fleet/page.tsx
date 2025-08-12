@@ -96,10 +96,23 @@ export default function FleetPage() {
     return (
         <main>
             <Hero
-                eyebrow="EV Fleet Charging Solutions"
-                header="Powering Your Electric Fleet, Seamlessly"
-                caption="From cars and taxis to trucks and buses, we provide reliable and scalable charging solutions to keep your fleet moving."
-                images={['https://images.unsplash.com/photo-1631751333859-5753a4795fb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']}
+                eyebrow={
+                    <>
+                        <span className="text-black">EV Fleet Charging Solutions</span>
+                    </>
+                }
+                header={
+                    <>
+                        <span className="text-black">Powering Your Electric Fleet, Seamlessly</span>
+                    </>
+                }
+                caption={
+                    <>
+                        <span className="text-black bg-white px-4">From cars and taxis to trucks and buses, </span> <br />
+                        <span className="text-black bg-white px-4"> we provide reliable and scalable charging solutions to keep your fleet moving.</span>
+                    </>
+                }
+                images={['/images/usecase/usecase-fleet.jpg']}
             />
 
             <FadeInScroll delay={0.2} duration={0.8}>
@@ -120,7 +133,7 @@ export default function FleetPage() {
                 <SubSection
                     eyebrow="Versatile Charging Infrastructure"
                     title="All Protocols, All Power Levels"
-                    description="We support all major charging protocols (AC/DC, CCS, CHAdeMO) and a wide range of power outputs to meet the specific needs of your diverse fleet. From overnight depot charging to rapid destination charging, we have you covered."
+                    description="We support all major charging protocols (AC, DC one phase, and DC three phase) and a wide range of power outputs to meet the specific needs of your diverse fleet. From overnight depot charging to rapid destination charging, we have you covered."
                     imageUrl="https://images.unsplash.com/photo-1705051278299-7e64ba21437a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     imageAlt="Multiple EV chargers"
                     imagePosition="left"
@@ -151,7 +164,7 @@ export default function FleetPage() {
                     title="Why Fleet Operators Choose Tiar"
                     subtitle="Discover the key advantages that make our charging solutions the preferred choice for fleet operators worldwide"
                     benefits={benefits}
-                    backgroundColor="gray"
+                    backgroundColor="white"
                 />
             </StaggeredScroll>
 
@@ -160,7 +173,7 @@ export default function FleetPage() {
                     eyebrow="Smart Energy Management"
                     title="Optimize Costs and Grid Impact"
                     description="Our intelligent energy management system balances charging loads, schedules sessions during off-peak hours, and integrates with renewable energy sources to reduce your operational costs and support grid stability."
-                    imageUrl="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imageUrl="/images/usecase/usecase-fleet.png"
                     imageAlt="Smart grid visualization"
                     imagePosition="left"
                 />
@@ -171,7 +184,6 @@ export default function FleetPage() {
                 subtitle="Join the growing number of fleet operators who are reducing costs and improving efficiency with our charging solutions."
                 buttons={ctaButton}
                 description="Free consultation • Custom pricing • 24/7 support"
-                backgroundColor="green"
             />
 
             <LatestPostsCarousel
