@@ -9,8 +9,8 @@ import { getCategories, getPosts } from "@/sanity/lib/fetch";
 export const revalidate = 60; // Revalidate every 60 seconds
 
 export const metadata: Metadata = {
-    title: "TIAR.ai Blog — OCPP, CSMS, and EV Charging in Indonesia & Asia",
-    description: "Insights on OCPP 1.6/2.0.1/2.1, CSMS best practices, and EV charging trends in Indonesia & Asia.",
+    title: "TIAR.ai Blog — OCPP, CMS, and EV Charging in Indonesia & Asia",
+    description: "Insights on OCPP 1.6/2.0.1/2.1, CMS best practices, and EV charging trends in Indonesia & Asia.",
 };
 
 interface BlogPageProps {
@@ -39,7 +39,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   return (
     <div className="container mx-auto px-6 py-12 md:py-16">
         <header className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">TIAR.ai Blog: OCPP, CSMS, and EV Charging</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">TIAR.ai Blog: OCPP, CMS, and EV Charging</h1>
             <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
                 Explore educational content about Open Charge Point Protocol (OCPP), Charging Station Management Systems (CMS), and the EV market in Indonesia & Asia.
             </p>

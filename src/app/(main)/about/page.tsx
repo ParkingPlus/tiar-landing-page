@@ -9,8 +9,8 @@ import BlurInScroll from "@/components/animations/collection/BlurInScroll";
 import SlideInScroll from "@/components/animations/collection/SlideInScroll";
 
 export const metadata: Metadata = {
-    title: "About TIAR.ai — CSMS OCPP Expertise for Indonesia & Asia",
-    description: "Learn about TIAR.ai's mission and expertise in OCPP‑compliant Charging Station Management Systems (CSMS) for Indonesia & Asia.",
+    title: "About TIAR.ai — CMS OCPP Expertise for Indonesia & Asia",
+    description: "Learn about TIAR.ai's mission and expertise in OCPP‑compliant Charging Station Management Systems (CMS) for Indonesia & Asia.",
 };
 
 const ctaButtons = [
@@ -24,7 +24,7 @@ export default function MissionVisionPage() {
             <Hero
                 eyebrow="Our Purpose"
                 header="Powering the Electric Future"
-                caption="We are TIAR.ai, a pioneer in OCPP‑compliant Charging Station Management Systems (CSMS). Our purpose is to build the software backbone for efficient EV charging — from Indonesia to Indonesia & Asia."
+                caption="We are TIAR.ai, a pioneer in OCPP‑compliant Charging Station Management Systems (CMS). Our purpose is to build the software backbone for efficient EV charging — from Indonesia to Indonesia & Asia."
                 images={['/images/background/about_us.png']}
             />
             <BlurInScroll duration={0.8}>

@@ -11,11 +11,11 @@ import SlideInScroll from "@/components/animations/collection/SlideInScroll";
 import FadeInScroll from "@/components/animations/collection/FadeInScroll";
 
 export const metadata: Metadata = {
-    title: "EV Charging Management Software (CSMS) — OCPP 1.6 / 2.0.1 / 2.1",
+    title: "EV Charging Management Software (CMS) — OCPP 1.6 / 2.0.1 / 2.1",
     description:
-      "OCPP‑compliant Charging Station Management System (CSMS). Real‑time monitoring, Dynamic Load Management, billing, analytics, white‑label, and APIs for Indonesia & Asia.",
+      "OCPP‑compliant Charging Station Management System (CMS). Real‑time monitoring, Dynamic Load Management, billing, analytics, white‑label, and APIs for Indonesia & Asia.",
     openGraph: {
-      title: "EV Charging Management Software (CSMS) — OCPP 1.6 / 2.0.1 / 2.1",
+      title: "EV Charging Management Software (CMS) — OCPP 1.6 / 2.0.1 / 2.1",
       description:
         "Manage and scale EV charging with OCPP 1.6/2.0.1/2.1. Monitoring, DLM, billing, analytics, white‑label, and APIs for Indonesia & Asia.",
       url: "https://tiar.ai/solutions/cms",

@@ -7,26 +7,26 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://tiar.ai"),
   title: {
     default:
-      "TIAR.ai — Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+      "TIAR.ai — Charging Station Management System (CMS) OCPP for Indonesia & Asia",
     template: "%s | TIAR",
   },
   description:
-    "EV Charging Management Software and Charging Station Management System (CSMS) based on OCPP 1.6, 2.0.1, and 2.1. Real-time monitoring, Dynamic Load Management, billing, analytics, and white-label for Indonesia & Asia.",
+    "EV Charging Management Software and Charging Station Management System (CMS) based on OCPP 1.6, 2.0.1, and 2.1. Real-time monitoring, Dynamic Load Management, billing, analytics, and white-label for Indonesia & Asia.",
   openGraph: {
     type: "website",
     siteName: "TIAR",
     title:
-      "TIAR.ai — Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+      "TIAR.ai — Charging Station Management System (CMS) OCPP for Indonesia & Asia",
     description:
-      "EV Charging Management Software and CSMS compliant with OCPP 1.6, 2.0.1, and 2.1 for operators, fleets, and governments in Indonesia & Asia.",
+      "EV Charging Management Software and CMS compliant with OCPP 1.6, 2.0.1, and 2.1 for operators, fleets, and governments in Indonesia & Asia.",
     url: "https://tiar.ai",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "TIAR.ai — Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+      "TIAR.ai — Charging Station Management System (CMS) OCPP for Indonesia & Asia",
     description:
-      "EV Charging Management Software and CSMS with real-time monitoring, Dynamic Load Management, billing, analytics, and white-label.",
+      "EV Charging Management Software and CMS with real-time monitoring, Dynamic Load Management, billing, analytics, and white-label.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -59,7 +59,7 @@ export default function RootLayout({
             "@type": "WebSite",
             url: "https://tiar.ai",
             name:
-              "TIAR.ai — Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+              "TIAR.ai — Charging Station Management System (CMS) OCPP for Indonesia & Asia",
             potentialAction: {
               "@type": "SearchAction",
               target: "https://tiar.ai/search?q={query}",

@@ -22,9 +22,9 @@ import StaggeredScroll from "@/components/animations/collection/StaggeredScroll"
 import BlurInScroll from "@/components/animations/collection/BlurInScroll";
 
 export const metadata: Metadata = {
-  title: "Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+  title: "Charging Station Management System (CMS) OCPP for Indonesia & Asia",
   description:
-    "EV Charging Management Software and CSMS based on OCPP 1.6, 2.0.1, and 2.1. Real-time monitoring, Dynamic Load Management, billing, analytics, and white-label for operators, fleets, and governments in Indonesia & Asia.",
+    "EV Charging Management Software and CMS based on OCPP 1.6, 2.0.1, and 2.1. Real-time monitoring, Dynamic Load Management, billing, analytics, and white-label for operators, fleets, and governments in Indonesia & Asia.",
 };
 
 const features = [
