@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Contact TIAR.ai — CSMS OCPP Demo & Consultation",
+  description:
+    "Request a demo or consultation for TIAR.ai's OCPP‑compliant Charging Station Management System (CSMS) in Indonesia & Asia.",
+};
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Mail, Phone, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 

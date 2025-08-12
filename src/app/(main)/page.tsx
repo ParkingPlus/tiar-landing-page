@@ -22,8 +22,9 @@ import StaggeredScroll from "@/components/animations/collection/StaggeredScroll"
 import BlurInScroll from "@/components/animations/collection/BlurInScroll";
 
 export const metadata: Metadata = {
-  title: "TIAR: The Operating System for Electric Mobility",
-  description: "The intelligent, all-in-one Charging Management System for operators, fleets, and businesses of all sizes. Built to manage, monetize, and scale your EV charging network.",
+  title: "Charging Station Management System (CSMS) OCPP for Indonesia & Asia",
+  description:
+    "EV Charging Management Software and CSMS based on OCPP 1.6, 2.0.1, and 2.1. Real-time monitoring, Dynamic Load Management, billing, analytics, and white-label for operators, fleets, and governments in Indonesia & Asia.",
 };
 
 const features = [
@@ -31,21 +32,21 @@ const features = [
     icon: <Zap className="w-full h-full" />,
     header: "Leading Software Solutions",
     text: "Charging Management System specializes in software solutions tailored for Charging Point Operators, ensuring optimal functionality and user experience.",
-    href: "/features/charging",
+    href: "/solutions/cms#ocpp",
     color: "#1988FB"
   },
   {
     icon: <Clock className="w-full h-full" />,
     header: "Streamlined Operations",
     text: "Our technology streamlines operations for Charging Point Operators, enhancing efficiency and reducing downtime.",
-    href: "/features/tracking",
+    href: "/solutions/cms#monitoring",
     color: "#FE9923"
   },
   {
     icon: <MapPin className="w-full h-full" />,
     header: "Electric Vehicle Market",
     text: "Charging Management System is positioned in the rapidly growing electric vehicle market, driving innovation and service delivery improvements.",
-    href: "/features/optimization",
+    href: "/solutions/cms#analytics",
     color: "#FD0039"
   },
 ];
@@ -59,6 +60,11 @@ const stats = [
 ];
 
 const ctaButtons = [
+  {
+    text: "See Product",
+    variant: "default" as const,
+    href: "/solutions/cms",
+  },
   {
     text: "Contact Us",
     variant: "outline" as const,
@@ -140,7 +146,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold bg-gradient-to-r text-gray-900 bg-clip-text drop-shadow-sm">An All-In-One Platform</h2>
               <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
-                Our platform provides everything you need to manage a modern, sustainable, and efficient public transport network.
+                OCPP‑compliant EV Charging Management Software with real‑time monitoring, Dynamic Load Management, billing, analytics, and white‑label capabilities.
               </p>
             </div>
           </AnimateOnScroll>

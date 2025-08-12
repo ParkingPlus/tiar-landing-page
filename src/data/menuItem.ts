@@ -21,8 +21,8 @@ export const menuItems: MenuItems = {
     { href: "/use-case/property-owners", title: "Property Owners", description: "Offer EV charging as a premium amenity.", imageUrl: "/images/usecase/usecase-property.png", imageAlt: "Property owners offering charging stations" },
   ],
   offerings: [
+    { href: "/solutions/cms", title: "Product (CSMS)", description: "EV Charging Management Software based on OCPP 1.6 / 2.0.1 / 2.1.", imageUrl: "/images/solutions/solution-cms.png", imageAlt: "Product overview dashboard" },
     { href: "/solutions/white-label", title: "White Label", description: "Customize your solution to fit your brand.", imageUrl: "/images/solutions/solution-whitelabel.png", imageAlt: "Diagram showing white label app" },
-    { href: "/solutions/cms", title: "CMS", description: "A charging management system for your charging stations.", imageUrl: "/images/solutions/solution-cms.png", imageAlt: "CMS dashboard" },
     { href: "/solutions/subaccount", title: "Subaccount", description: "A subaccount management system for property owners.", imageUrl: "/images/solutions/solution-subaccount.png", imageAlt: "Subaccount dashboard" },
   ],
   resources: [

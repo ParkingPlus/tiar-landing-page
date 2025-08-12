@@ -9,8 +9,8 @@ import BlurInScroll from "@/components/animations/collection/BlurInScroll";
 import SlideInScroll from "@/components/animations/collection/SlideInScroll";
 
 export const metadata: Metadata = {
-    title: "Our Mission & Vision | TIAR",
-    description: "Discover the mission that drives TIAR to build the future of electric mobility, from our home in Indonesia to the world.",
+    title: "About TIAR.ai — CSMS OCPP Expertise for Indonesia & Asia",
+    description: "Learn about TIAR.ai's mission and expertise in OCPP‑compliant Charging Station Management Systems (CSMS) for Indonesia & Asia.",
 };
 
 const ctaButtons = [
@@ -24,7 +24,7 @@ export default function MissionVisionPage() {
             <Hero
                 eyebrow="Our Purpose"
                 header="Powering the Electric Future"
-                caption="We are Tiar, a pioneer in Charging Management Systems. Our purpose is to build the software backbone for a cleaner and more efficient transportation ecosystem, starting from our home in Indonesia and expanding across the globe."
+                caption="We are TIAR.ai, a pioneer in OCPP‑compliant Charging Station Management Systems (CSMS). Our purpose is to build the software backbone for efficient EV charging — from Indonesia to Indonesia & Asia."
                 images={['/images/background/about_us.png']}
             />
             <BlurInScroll duration={0.8}>
@@ -35,7 +35,7 @@ export default function MissionVisionPage() {
               <SubSection
                   eyebrow="Our Origin"
                   title="Indonesian Roots, Global Ambition"
-                  description="Tiar was born from a unique insight into the dynamic, high-growth markets of Southeast Asia. We built and perfected our platform in Indonesia, creating a robust, scalable, and adaptable system designed to meet the complexities of the region. This foundation gives us an unparalleled advantage as we expand, offering a battle-tested solution that understands the nuances of emerging markets better than anyone."
+                  description="Tiar was born from a unique insight into the dynamic, high-growth markets of Indonesia & Asia. We built and perfected our platform in Indonesia, creating a robust, scalable, and adaptable system designed to meet the complexities of the region. This foundation gives us an unparalleled advantage as we expand, offering a battle-tested solution that understands the nuances of emerging markets better than anyone."
                   imageUrl="/images/about/global.png"
                   imageAlt="Map of Southeast Asia highlighting trade and data routes"
                   imagePosition="right"

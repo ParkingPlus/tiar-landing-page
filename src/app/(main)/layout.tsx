@@ -10,7 +10,9 @@ export default function MainLayout({
   return (
     <div className="overflow-x-hidden bg-white">
       <Navbar />
-      {children}
+      <main id="main-content" role="main">
+        {children}
+      </main>
       <Footer />
     </div>
   );

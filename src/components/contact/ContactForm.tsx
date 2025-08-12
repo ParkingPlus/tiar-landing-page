@@ -45,6 +45,7 @@ const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "";
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [botField, setBotField] = useState("");
 
   const {
     register,
@@ -72,6 +73,13 @@ export function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
+    // Simple honeypot: if filled, treat as spam
+    if (botField.trim().length > 0) {
+      setIsSubmitting(false);
+      toast.error("Submission blocked. Please try again.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("access_key", WEB3FORMS_ACCESS_KEY || "");
     formData.append("subject", "New Contact Form Submission from Tiar");
@@ -106,7 +114,21 @@ export function ContactForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate aria-describedby="contact-form-description">
+        <p id="contact-form-description" className="sr-only">Contact sales form. All fields marked with * are required.</p>
+        {/* Honeypot field - hidden from users */}
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="companyWebsite">Company Website</label>
+          <input
+            id="companyWebsite"
+            name="companyWebsite"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={botField}
+            onChange={(e) => setBotField(e.target.value)}
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Primary Need */}
             <div className="space-y-2">
@@ -161,15 +183,15 @@ export function ContactForm() {
              {/* First Name */}
             <div className="space-y-2">
                 <Label htmlFor="firstName">First Name*</Label>
-                <Input id="firstName" {...register("firstName")} placeholder="John" />
-                {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
+                <Input id="firstName" {...register("firstName")} placeholder="John" aria-invalid={!!errors.firstName} aria-describedby={errors.firstName ? "firstName-error" : undefined} />
+                {errors.firstName && <p id="firstName-error" className="text-red-500 text-sm">{errors.firstName.message}</p>}
             </div>
 
             {/* Last Name */}
             <div className="space-y-2">
                 <Label htmlFor="lastName">Last Name*</Label>
-                <Input id="lastName" {...register("lastName")} placeholder="Doe" />
-                {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName.message}</p>}
+                <Input id="lastName" {...register("lastName")} placeholder="Doe" aria-invalid={!!errors.lastName} aria-describedby={errors.lastName ? "lastName-error" : undefined} />
+                {errors.lastName && <p id="lastName-error" className="text-red-500 text-sm">{errors.lastName.message}</p>}
             </div>
         </div>
 
@@ -177,15 +199,15 @@ export function ContactForm() {
             {/* Business Email */}
             <div className="space-y-2">
                 <Label htmlFor="email">Business Email*</Label>
-                <Input id="email" type="email" {...register("email")} placeholder="john.doe@company.com" />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                <Input id="email" type="email" {...register("email")} placeholder="john.doe@company.com" aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} />
+                {errors.email && <p id="email-error" className="text-red-500 text-sm">{errors.email.message}</p>}
             </div>
 
             {/* Phone Number */}
             <div className="space-y-2">
                 <Label htmlFor="phoneNumber">Phone Number*</Label>
-                <Input id="phoneNumber" type="tel" {...register("phoneNumber")} placeholder="+62 (555) 123-4567" />
-                {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
+                <Input id="phoneNumber" type="tel" {...register("phoneNumber")} placeholder="+62 (555) 123-4567" aria-invalid={!!errors.phoneNumber} aria-describedby={errors.phoneNumber ? "phoneNumber-error" : undefined} />
+                {errors.phoneNumber && <p id="phoneNumber-error" className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
             </div>
         </div>
 
@@ -193,8 +215,8 @@ export function ContactForm() {
             {/* Company Name */}
             <div className="space-y-2">
                 <Label htmlFor="companyName">Company Name*</Label>
-                <Input id="companyName" {...register("companyName")} placeholder="Your Company Inc." />
-                {errors.companyName && <p className="text-red-500 text-sm">{errors.companyName.message}</p>}
+                <Input id="companyName" {...register("companyName")} placeholder="Your Company Inc." aria-invalid={!!errors.companyName} aria-describedby={errors.companyName ? "companyName-error" : undefined} />
+                {errors.companyName && <p id="companyName-error" className="text-red-500 text-sm">{errors.companyName.message}</p>}
             </div>
             
             {/* Country */}
@@ -225,8 +247,8 @@ export function ContactForm() {
         {/* Message */}
         <div className="space-y-2">
             <Label htmlFor="message">Message*</Label>
-            <Textarea id="message" {...register("message")} placeholder="Please describe your needs..." />
-            {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+            <Textarea id="message" {...register("message")} placeholder="Please describe your needs..." aria-invalid={!!errors.message} aria-describedby={errors.message ? "message-error" : undefined} />
+            {errors.message && <p id="message-error" className="text-red-500 text-sm">{errors.message.message}</p>}
         </div>
 
         {/* How did you hear about us? */}
@@ -273,7 +295,7 @@ export function ContactForm() {
          {errors.terms && <p className="text-red-500 text-sm">{errors.terms.message}</p>}
 
 
-        <Button type="submit" className="w-full bg-brand-500 text-white hover:bg-brand-600 transition-colors hover:translate-y-0.5" disabled={isSubmitting}>
+        <Button type="submit" className="w-full bg-brand-500 text-white hover:bg-brand-600 transition-colors hover:translate-y-0.5" aria-busy={isSubmitting} disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Contact Sales"}
         </Button>
       </form>

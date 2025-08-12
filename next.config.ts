@@ -28,6 +28,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/product",
+        destination: "/solutions/cms",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

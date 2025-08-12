@@ -96,7 +96,7 @@ export function MegaMenu({
       "fixed left-4 right-4 bg-white/60 rounded-lg border-t border-gray-100 shadow-lg z-50",
       className
     )}>
-      <div className='bg-white m-4 rounded-sm'>
+      <div className='bg-white m-4 rounded-sm' role="dialog" aria-label={`${title} menu`}>
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
@@ -157,7 +157,7 @@ export function MegaMenu({
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-96">
+            <div className="w-full lg:w-96" aria-hidden={!activeItem?.imageUrl}>
               <ImagePreview item={activeItem} />
             </div>
           </div>

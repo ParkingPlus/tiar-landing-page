@@ -92,10 +92,12 @@ export function SubSection({
               "md:order-first": imagePosition === 'left',
             })}
           >
+            {/* Prefer Next Image for optimization; fallback if remote domain not configured */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={imageUrl}
               alt={imageAlt}
+              loading="lazy"
               className="rounded-lg shadow-2xl object-cover w-full h-auto max-w-full"
               style={{ maxWidth: '600px' }}
             />

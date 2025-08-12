@@ -91,10 +91,10 @@ export function Navbar() {
             : "bg-transparent border-none text-white"
       )}
     >
-      <div className="max-w-7xl mx-auto flex h-18 items-center justify-between px-6 md:px-8 ">
+      <div className="max-w-7xl mx-auto flex h-18 items-center justify-between px-6 md:px-8 " role="navigation" aria-label="Primary">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-3 lg:flex-1">
-          <Image src={logoSrc} alt="logo" width={120} height={120} suppressHydrationWarning />
+        <Link href="/" className="flex items-center space-x-3 lg:flex-1" aria-label="Go to TIAR homepage">
+          <Image src={logoSrc} alt="TIAR logo" width={120} height={120} priority suppressHydrationWarning />
         </Link>
 
         {/* Desktop Navigation */}
