@@ -25,7 +25,7 @@ export function Footer() {
             </p>
             <p className="flex items-center gap-2">
               <span className="text-brand-600">📞</span>
-              <span>+628119009563 (Indonesia)</span>
+              <span>+1 (412) 983-3798 (Indonesia)</span>
             </p>
             <p className="flex items-center gap-2">
               <span className="text-brand-600">✉️</span>

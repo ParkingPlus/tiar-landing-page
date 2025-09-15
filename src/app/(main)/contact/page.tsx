@@ -26,8 +26,8 @@ const contactMethods = [
     icon: <Phone className="w-6 h-6" />,
     title: "Phone",
     description: "Call us directly",
-    contact: "+628119009563",
-    href: "tel:+628119009563"
+    contact: "+1 (412) 983-3798",
+    href: "tel:+1 (412) 983-3798"
   },
   {
     icon: <MapPin className="w-6 h-6" />,

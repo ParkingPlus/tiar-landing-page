@@ -144,7 +144,7 @@ export default function Home() {
           {/* Header with fade up animation */}
           <AnimateOnScroll delay={0.2}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold bg-gradient-to-r text-gray-900 bg-clip-text drop-shadow-sm">An All-In-One Platform</h2>
+              <h2 className="text-3xl font-bold bg-gradient-to-r text-black bg-clip-text drop-shadow-sm">An All-In-One Platform</h2>
               <p className="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
                 OCPP‑compliant EV Charging Management Software with real‑time monitoring, Dynamic Load Management, billing, analytics, and white‑label capabilities.
               </p>
